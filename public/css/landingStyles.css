@@ -1,0 +1,35 @@
+.landing-white-section{
+    color: #039eb0;
+    background-color: rgb(245, 245, 248);
+}
+
+.landing-head-container{
+    padding: 2rem;
+    padding-left: 3rem;
+}
+
+.main-heading{
+    padding: 3rem;
+    font-size: 4rem;
+}
+
+.landing-info{
+    margin: 1rem;
+    margin-left: 10rem;
+    padding-bottom: 7rem;
+    color: rgb(189, 60, 43);
+}
+
+.auth-buttons{
+    display: flex;
+    justify-content: center;    
+}
+
+.auth-btn{
+    margin: 1rem;
+    height: 3.2rem;
+}
+
+.signup-btn{
+    margin-right: 20rem;
+}
