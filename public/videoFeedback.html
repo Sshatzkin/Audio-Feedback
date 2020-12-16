@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Feedback</title>
+</head>
+<body>
+    <header style="border-bottom: 3px solid #06ddf7;">
+        <span style="padding-left: 15px; font-size: 30px">Video Feedback</span>
+        <img class="logout" src="../images/logout.png">
+        <img src="../images/profilePic.png">
+    </header>
+    <div class="sideBar" style="height: 100%; width: 220px; top: 52px">
+        <span id="uploadSpan">Upload Video<img id="uploadImg" src="../images/uploadSelect.png" style="width: 32px;"></span>
+        <ul>
+            <li><span style="width: 123%; margin-left: -40px;">Files</span>
+                <ul>
+                    <li><a href="#">video1</a></li>
+                    <li><a href="#">video2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="main" style="height: 100%; margin-left: 220px;">
+        <div class="video" style="margin-top: 15px; margin-left: 62px;">
+            <span style="font-size: 20px;">Video Name</span>
+            <!--Place for Video-->
+            <!--<video></video>-->
+            <img src="../images/haha.png" style="width: 100%">
+        </div>
+        <div class="feedbackDisplay">
+            <span style="font-size: 20px;">Feedback</span>
+            <div style="border: 1px solid #06ddf7; border-radius: 10px; height: 363px; width: 417px;">
+                <div class="search">
+                    <input type="text" id="search" placeholder="Search">
+                    <img src="../images/search.png">
+                </div>
+                <div class="texts" style="overflow-y:auto;">
+                    <span>XX:XX</span>
+                    <p>This is the best video feedback web app ever.
+                    This is the best video feedback web app ever.
+                    This is the best video feedback web app ever.
+                    This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                    </p>
+                    <span>XX:XX</span>
+                    <p>This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                        This is the best video feedback web app ever.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons" style="top: 474px; left: 289px;">
+            <div id="addText" style="top: 447px;left: 270px;">Add Timestamp</div>
+            <img id="addBtn" src="../images/addTimeStamp.png">
+            <div id="delete" style="left: 370px;">Delete Timestamp</div>
+            <img id="deleteBtn" src="../images/delete.png" style="margin-left: 20px;">
+        </div>
+        <div class="typeInFeedback" style="left: 289px; top: 533px;">
+            <textarea placeholder="Type in your feedback..."></textarea>
+            <img src="../images/enter.png">
+        </div>
+    </div>
+
+</body>
+</html>
+
+<style media="screen">
+    html{
+        height: 100%;
+        width: 100%;
+        overflow:hidden;
+    }
+    body{
+        font-family: 'Avenir';
+        height: 100%;
+    }
+    div{
+        position: fixed;
+    }
+    header img{
+        width: 33px;
+        float: right;
+        padding-right: 5px;
+    }
+    header .logout:hover{
+        content: url('../images/logoutSelect.png');
+        cursor:pointer;
+    }
+    .sideBar{
+        height: 100%;
+        position: fixed;
+        width: 220px;
+        border-right: 1px solid #DDDDDD;
+    }
+    .sideBar span{
+        display: block;
+        font-size: 17px;
+        text-align: center;
+        border-bottom: 1px solid #ccc7c7;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        letter-spacing: 1px;
+        width: 100%;
+    }
+    .sideBar span:hover{
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+        color: #039eb0;
+        cursor:pointer;
+    }
+    #uploadSpan:active{
+        background: #f3f3f3;
+    }
+    .sideBar img{
+        width: 35px;
+        position: absolute;
+        margin-left: 8px;
+        margin-top: -8px;
+    }
+    .main .video{
+        width: 600px;
+        height: 300px;
+        box-sizing: border-box;
+    }
+    .feedbackDisplay{
+        margin-left: 15px;
+        margin-top: 15px;
+        height: 400px;
+        width: 28%;
+        left: 925px;
+    }
+    .feedbackDisplay input{
+        margin-top: 20px;
+        margin-left: 20px;
+        width: 315px;
+        border: 1px solid #ccc7c7;
+        border-radius: 10px;
+        outline: none;
+        height: 30px;
+        padding-left: 10px;
+    }
+    .feedbackDisplay input:focus{
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 4px 1px;
+    }
+    .feedbackDisplay .search img{
+        height: 30px;
+        position: fixed;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    .feedbackDisplay .search img:hover{
+        content: url("../images/searchSelect.png");
+        cursor:pointer;
+    }
+    .feedbackDisplay .texts{
+        overflow-y: auto;
+        margin-top: 68px;
+        margin-left: 22px;
+        height: 294px;
+        width: 367px;
+    }
+    .feedbackDisplay .texts p{
+        text-align: justify;
+        display: inline-block;
+        margin-left: 60px;
+        margin-top: -23px;
+        background: #eefffe;
+        border-radius: 10px;
+        padding: 15px 20px;
+    }
+    .buttons img{
+        width: 33px;
+        border: 1px solid #ccc7c7;
+        padding: 3px 25px;
+        border-radius: 10px;
+    }
+    .buttons img:hover{
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 4px 1px;
+        cursor:pointer;
+    }
+    .buttons img:active{
+        background: #f3f3f3;
+    }
+    #addText, #delete{
+        color: white;
+        opacity: 0;
+        background-color: #bdc5c5;
+        border-radius: 5px;
+        padding: 2px 8px;
+        font-size: 15px;
+        top: 447px;
+    }
+    .typeInFeedback textarea{
+        width: 975px;
+        height: 150px;
+        padding: 7px 12px;
+        outline: none;
+        font-family: inherit;
+        border: 1px solid #ccc7c7;
+        border-radius: 10px;
+        font-size: 18px;
+        padding-right: 81px;
+    }
+    .typeInFeedback textarea:focus{
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 4px 1px;
+    }
+    .typeInFeedback img{
+        width: 50px;
+        position: fixed;
+        right: 100px;
+        top: 533px;
+    }
+    .typeInFeedback img:hover{
+        content: url("../images/enterSelect.png");
+        cursor:pointer;
+    }
+    ul{
+        list-style: none;
+        margin-top: 0px;
+    }
+    ul li{
+        float: left;
+        text-align: center;
+        line-height: 27px;
+        position: relative;
+        width: 100%;
+    }
+    a{
+        text-decoration: none;
+        color:black;
+        display: block;
+        padding:0 10px;
+    }
+    a:hover{
+        background-color: #f3f3f3;
+    }
+    ul li ul li{
+        float: none;
+        background-color: #ffffff;
+        white-space: nowrap;
+        margin-left: -80px;
+        width: 157%;
+        text-align: center;
+        border-bottom: 1px solid #ccc7c7;
+    }
+    ul li ul{
+        opacity: 0;
+        transition: opacity 500ms 0s;
+    }
+    ul li:hover ul{
+        opacity: 1;
+        transition: opacity 500ms 0s;
+    }
+</style>
+
+<script>
+    //Change the uploading image in the upload span
+    var uploadSpan = document.getElementById("uploadSpan");
+    uploadSpan.addEventListener("mouseover", function(){
+        document.getElementById("uploadImg").src = "../images/upload.png"
+    },false);
+    uploadSpan.addEventListener("mouseout", function(){
+        document.getElementById("uploadImg").src = "../images/uploadSelect.png"
+    },false);
+
+    //Popover textbox for the buttons
+    document.getElementById("addBtn").addEventListener("mouseover", function () {
+        document.getElementById("addText").style.transition = "opacity 500ms 0s"
+        document.getElementById("addText").style.opacity = "1";
+    })
+    document.getElementById("addBtn").addEventListener("mouseout", function () {
+        document.getElementById("addText").style.transition = "opacity 500ms 0s"
+        document.getElementById("addText").style.opacity = "0";
+    })
+    document.getElementById("deleteBtn").addEventListener("mouseover", function () {
+        document.getElementById("delete").style.transition = "opacity 500ms 0s"
+        document.getElementById("delete").style.opacity = "1";
+    })
+    document.getElementById("deleteBtn").addEventListener("mouseout", function () {
+        document.getElementById("delete").style.transition = "opacity 500ms 0s"
+        document.getElementById("delete").style.opacity = "0";
+    })
+</script>
+
+<!--
+TODO: 1. -->
