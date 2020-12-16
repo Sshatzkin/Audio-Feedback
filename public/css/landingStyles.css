@@ -15,14 +15,15 @@
 
 .landing-info{
     margin: 1rem;
-    margin-left: 10rem;
+    margin-left: 8rem;
     padding-bottom: 7rem;
     color: rgb(189, 60, 43);
 }
 
 .auth-buttons{
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+    padding-top: .9rem;    
 }
 
 .auth-btn{
@@ -32,4 +33,20 @@
 
 .signup-btn{
     margin-right: 20rem;
+}
+
+.features-header{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.feature-text{
+    text-align: center;
+}
+
+.landing-blue-section{
+    background-color: #039eb0;
+    color: linen;
+    padding-bottom: 5rem;
 }
