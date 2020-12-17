@@ -157,7 +157,7 @@ function setVideo (filename){
   });
 }
 
-setVideo(default_filename);
+setVideo("Guitar Practice 12-17-20.mp4");
 
 /*
  * Display Comments __________________
@@ -208,8 +208,6 @@ function setCommentListner(filename){
     return "WRONG ID";
   });
 }
-
-//setCommentListner(default_filename);
 
 /*
  * SET COMMENT __________________
