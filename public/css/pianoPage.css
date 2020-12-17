@@ -26,15 +26,15 @@ header .videoNav:hover{
     display: flex;
     cursor: pointer;
 }
-.blackKey .item{
+.blackKey .pianoKey{
     height: 140px;
     width: 3.1%;
     background: black;
 }
-.blackKey .item span{
+.blackKey .pianoKey span{
     color: white;
 }
-.item {
+.pianoKey {
     width: 4.3%;
     height: 250px;
     background: #fff;
@@ -45,26 +45,26 @@ header .videoNav:hover{
     border: 1px solid;
     border-radius: 0 0 6px 6px;
 }
-.blackKey .item:hover{
+.blackKey .pianoKey:hover{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 10px 10px;
 }
-.whiteKey .item:hover{
+.whiteKey .pianoKey:hover{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 10px 8px;
 }
-.blackKey .item:active{
+.blackKey .pianoKey:active{
     background-color: #bdc5c5;
 }
-.whiteKey .item:active{
+.whiteKey .pianoKey:active{
     background-color: #bdc5c5;
 }
-.item span {
+.pianoKey span {
     position: absolute;
     left: 50%;
     bottom: 15px;
     transform: translateX(-50%);
     display: block;
 }
-.item .bottom::after {
+.pianoKey .bottom::after {
     content: ".";
     font-size: 20px;
     font-weight: bold;
