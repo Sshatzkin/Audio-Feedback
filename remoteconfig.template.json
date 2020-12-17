@@ -1,0 +1,19 @@
+{
+  "parameters": {},
+  "version": {
+    "versionNumber": "1"
+  },
+  "parameterGroups": {
+    "new menu": {
+      "description": "New Menu",
+      "parameters": {
+        "pumpkin_spice_season": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Whether it's currently pumpkin spice season."
+        }
+      }
+    }
+  }
+}
