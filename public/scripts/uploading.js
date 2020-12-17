@@ -62,12 +62,6 @@ function writeVideotoDB(videoName, videoID, user){
     name: videoName,
     username: user,
     id: videoID,
-    comments: {
-      0: {
-        timestamp: 0,
-        text: 0
-      }
-    }
   });
 }
 // This is just for testing
@@ -83,7 +77,7 @@ actualBtn.addEventListener('change', function(){
    var metadata = {
     contentType: file.type,
     customMetadata: {
-      "user" : "USERNAME GOES HERE"
+      "user" : "UNKNOWN USER"
     }
   };
 
