@@ -4,47 +4,6 @@ var database = firebase.database();
 //var pianoRef = database.ref('Piano/0/');
 var pianoPath = 'Piano/0/';
 
-/*
- * Syncing Functions __________________
- */
-function processID(id){
-  var newid = id.replace("/", "-");
-  newid = newid.replace(".", "-");
-  return newid;
-}
-
-function writeKey(keyName, state){
-  var path = pianoPath + keyName + '/';
-  database.ref(path).set({
-    pressed: state
-  });
-}
-
-function updateKey(keyName, state){
-  keyName = processID(keyName);
-  var path = pianoPath + keyName + '/';
-  database.ref(path).set({
-    pressed: state
-  });
-}
-
-//updateKey("C.m4a")
-
-
-/*
-This is just for creating a new Piano in the db
-
-//var audio = document.createElement('audio');
-var allKeys = document.getElementsByClassName("pianoKey");
-for(var i = 0; i < allKeys.length; i++){
-  writeKey(processID(allKeys[i].id), false);  
-}
-*/
-
-
-
-
-
 
 var whiteSound0,
   whiteSound1,
@@ -72,44 +31,7 @@ var blackSound0,
   blackSound8,
   blackSound9;
 
-
-
-var whiteKeys = ["C.m4a","D.m4a","E.m4a","F.m4a","G.m4a","A.m4a","B.m4a",
-  "CC.m4a","DD.m4a", "EE.m4a", "FF.m4a", "GG.m4a", "AA.m4a", "BB.m4a"];
-
-var blackKeys = ["aaa.m4a","bbb.m4a","ccc.m4a", "ddd.m4a","eee.m4a",
-  "aaaa.m4a", "bbbb.m4a", "cccc.m4a", "dddd.m4a", "eeee.m4a"];
-
-
-var player_switch = document.getElementById("playerSwitch");
-var player_label = document.getElementById("playerLabel");
-
-function set_mode(){
-
-  var player_mode = player_switch.checked;
-  console.log(player_mode);
-
-
-
-  if(player_mode){
-    player_label.innerHTML = "Player";
-    var audio = document.createElement("audio");
-    var allKeys = document.getElementsByClassName("pianoKey");
-    for (var i = 0; i < allKeys.length; i++) {
-      allKeys[i].addEventListener("mousedown", function () {
-        audio.src = "pianoKeySound/" + this.id;
-        audio.loop = true
-        audio.play();
-        updateKey(this.id, true);
-      });
-      allKeys[i].addEventListener("mouseup", function () {
-        //audio.src = "pianoKeySound/" + this.id;
-        audio.loop = false;
-        updateKey(this.id, false);
-      });
-    }
-
-    whiteSound0 = document.createElement("audio");
+whiteSound0 = document.createElement("audio");
     whiteSound0.src = "../pianoKeySound/C.m4a";
     whiteSound1 = document.createElement("audio");
     whiteSound1.src = "../pianoKeySound/D.m4a";
@@ -159,12 +81,144 @@ function set_mode(){
     blackSound9 = document.createElement("audio");
     blackSound9.src = "../pianoKeySound/eeee.m4a";
 
+    var whiteSounds = 
+    [ whiteSound0,
+      whiteSound1,
+      whiteSound2,
+      whiteSound3,
+      whiteSound4,
+      whiteSound5,
+      whiteSound6,
+      whiteSound7,
+      whiteSound8,
+      whiteSound9,
+      whiteSound10,
+      whiteSound11,
+      whiteSound12,
+      whiteSound13];
 
-    var whiteKeys = ["C.m4a","D.m4a","E.m4a","F.m4a","G.m4a","A.m4a","B.m4a",
-    "CC.m4a","DD.m4a", "EE.m4a", "FF.m4a", "GG.m4a", "AA.m4a", "BB.m4a"];
+    var blackSounds = 
+    [
+      blackSound0,
+      blackSound1,
+      blackSound2,
+      blackSound3,
+      blackSound4,
+      blackSound5,
+      blackSound6,
+      blackSound7,
+      blackSound8,
+      blackSound9
+    ]
 
-    var blackKeys = ["aaa.m4a","bbb.m4a","ccc.m4a", "ddd.m4a","eee.m4a",
-    "aaaa.m4a", "bbbb.m4a", "cccc.m4a", "dddd.m4a", "eeee.m4a"];
+var whiteKeys = ["C.m4a","D.m4a","E.m4a","F.m4a","G.m4a","A.m4a","B.m4a",
+  "CC.m4a","DD.m4a", "EE.m4a", "FF.m4a", "GG.m4a", "AA.m4a", "BB.m4a"];
+
+var blackKeys = ["aaa.m4a","bbb.m4a","ccc.m4a", "ddd.m4a","eee.m4a",
+  "aaaa.m4a", "bbbb.m4a", "cccc.m4a", "dddd.m4a", "eeee.m4a"];
+
+console.log(whiteSounds)
+console.log(blackSounds)
+console.log(whiteKeys)
+console.log(blackKeys)
+// Establish dictionary of string/audio pairs
+var sounds_dict = new Object();
+for (var i = 0; i < whiteKeys.length; i++){
+  sounds_dict[whiteKeys[i]] = whiteSounds[i]; 
+}
+for (var i = 0; i < blackKeys.length; i++){
+  sounds_dict[blackKeys[i]] = blackSounds[i]; 
+}
+console.log(sounds_dict);
+
+
+/*
+ * Syncing Functions __________________
+ */
+function processID(id){
+  var newid = id.replace("/", "-");
+  newid = newid.replace(".", "-");
+  return newid;
+}
+
+function writeKey(keyName, state){
+  var path = pianoPath + keyName + '/';
+  database.ref(path).set({
+    pressed: state
+  });
+}
+
+function updateKey(keyName, state){
+  keyName = processID(keyName);
+  var path = pianoPath + keyName + '/';
+  database.ref(path).set({
+    pressed: state
+  });
+}
+
+function pressKey(keyId, state){
+  var audio = sounds_dict[keyId];
+  console.log(keyId);
+  console.log(sounds_dict);
+  audio.loop = state;
+  if (state){
+    audio.play();
+  }
+}
+
+function setDBKeyListener(keyId){
+  var newKeyId = processID(keyId);
+  console.log("Setting Key Listener");
+  var filepath = pianoPath + newKeyId;
+  var keyRef = database.ref(filepath);
+  keyRef.on('value', function(snapshot){
+    var data = snapshot.val();
+    console.log(data.pressed);
+    pressKey(keyId,data.pressed);
+  })
+}
+
+//updateKey("C.m4a")
+
+
+/*
+This is just for creating a new Piano in the db
+
+//var audio = document.createElement('audio');
+var allKeys = document.getElementsByClassName("pianoKey");
+for(var i = 0; i < allKeys.length; i++){
+  writeKey(processID(allKeys[i].id), false);  
+}
+*/
+
+
+var player_switch = document.getElementById("playerSwitch");
+var player_label = document.getElementById("playerLabel");
+
+function set_mode(){
+
+  var player_mode = player_switch.checked;
+  console.log(player_mode);
+
+
+
+  if(player_mode){
+    player_label.innerHTML = "Player";
+    var audio = document.createElement("audio");
+    var allKeys = document.getElementsByClassName("pianoKey");
+    for (var i = 0; i < allKeys.length; i++) {
+      allKeys[i].addEventListener("mousedown", function () {
+        audio.src = "pianoKeySound/" + this.id;
+        audio.loop = true
+        audio.play();
+        updateKey(this.id, true);
+      });
+      allKeys[i].addEventListener("mouseup", function () {
+        //audio.src = "pianoKeySound/" + this.id;
+        audio.loop = false;
+        updateKey(this.id, false);
+      });
+    }
 
     document.addEventListener("keydown", (e) => {
       switch (e.code) {
@@ -488,28 +542,29 @@ function set_mode(){
         }
     });
   } else {
-      player_label.innerHTML = "Listener";
-      var audio = document.createElement("audio");
-      var allKeys = document.getElementsByClassName("pianoKey");
-      for (var i = 0; i < allKeys.length; i++) {
-        var new_element = allKeys[i].cloneNode(true);
-        allKeys[i].parentNode.replaceChild(new_element, allKeys[i]);
-        /*allKeys[i].addEventListener("mousedown", function () {
-          audio.src = "pianoKeySound/" + this.id;
-          audio.loop = true
-          audio.play();
-          updateKey(this.id, true);
-        });
-        allKeys[i].addEventListener("mouseup", function () {
-          //audio.src = "pianoKeySound/" + this.id;
-          audio.loop = false;
-          updateKey(this.id, false);
-        });*/
-      }
-    console.log("listener");
+    // Set label
+    player_label.innerHTML = "Listener";
+
+    // Remove listeners
+    document.onkeydown = null;
+    document.onkeyup = null;
+
+
+    var audio = document.createElement("audio");
+    var allKeys = document.getElementsByClassName("pianoKey");
+    for (var i = 0; i < allKeys.length; i++) {
+      var new_element = allKeys[i].cloneNode(true);
+      allKeys[i].parentNode.replaceChild(new_element, allKeys[i]);
+      setDBKeyListener(allKeys[i].id);
+    }
+
+    // Update from the server.
+    //pressKey(audio, keyId, on);
+
   }
+  return
 }
 
-console.log(player_switch);
+set_mode();
 player_switch.addEventListener( 'change', set_mode);
 
