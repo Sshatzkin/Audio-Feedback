@@ -174,7 +174,6 @@ function displayComment (data){
   var text = data.exportVal().text;
   var time = formatTime(data.exportVal().timestamp);
   
-  // Create new li
 
   // Create new span
   var newSpan = document.createElement("SPAN");
@@ -191,18 +190,6 @@ function displayComment (data){
   commentsContainer.appendChild(newP);
   return;
 }
-
-/*
-function setCommentsOnce(filename){
-  var videoID = getVideoId(filename);
-  var filepath = 'Videos/' + videoID +"/comments/";
-  var commentsRef = database.ref(filepath);
-  //var query = commentsRef.orderByChild("timestamp");
-  //query.addListnerForSingleValueEvent(queryValueListener);
-  
-  var data = commentsRef.orderByChild('timestamp');
-  displayComment(data);
-}*/
 
 function setCommentListner(filename){
   var filepath = files_folder + filename;
@@ -222,8 +209,6 @@ function setCommentListner(filename){
   .catch((error) => {
     return "WRONG ID";
   });
-
-  
 }
 
 //setCommentListner(default_filename);
