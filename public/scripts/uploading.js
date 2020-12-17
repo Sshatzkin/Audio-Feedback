@@ -18,7 +18,7 @@ actualBtn.addEventListener('change', function(){
   var file = this.files[0];
 
   var image_ref = storageRef.child(files_folder + file.name);
-  
+
    // Create file metadata including the content type
    var metadata = {
     contentType: file.type,
@@ -30,10 +30,10 @@ actualBtn.addEventListener('change', function(){
     alert("File uploaded!");
   });
 
- 
+
 
   // Upload the file and metadata
- 
+
 })
 
 // __ Show available files __
@@ -47,15 +47,14 @@ listRef.listAll().then(function(res) {
     // All the prefixes under listRef.
     // You may call listAll() recursively on them.
   });
-  
+
   var html_list = '';
   res.items.forEach(function(itemRef) {
     html_list += '<li class="fileButton"><a href=#>' + itemRef.name + '</a></li>';
-    
+    document.getElementById('fileList').innerHTML = html_list;
     // All the items under listRef.
   });
   // set the file list element
-  document.getElementById('fileList').innerHTML = html_list;
 
 
 // filebuttons
@@ -86,12 +85,12 @@ function setVideo (filename){
 
   storageRef.child(filepath).getDownloadURL().then(function(url) {
     // `url` is the download URL for 'images/stars.jpg'
-  
+
     // Or inserted into an <img> element:
     // Name of the video box
     var videoTag = document.getElementById('VideoPlaceholder');
     videoTag.src = url;
-  
+
     var videoTitleSpan = document.getElementById('VideoTitleSpan');
     videoTitleSpan.innerHTML = filename;
   }).catch(function(error) {

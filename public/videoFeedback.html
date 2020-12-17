@@ -8,17 +8,17 @@
 <body>
     <header style="border-bottom: 3px solid #06ddf7;">
         <span style="padding-left: 15px; font-size: 30px">Video Feedback</span>
-        <img class="logout" src="./images/logout.png">
+        <img id="logout" class="logout" src="./images/logout.png">
         <img src="./images/profilePic.png">
     </header>
     <div class="sideBar" style="height: 100%; width: 220px; top: 52px">
         <!-- <span id="uploadSpan">Upload Video<img id="uploadImg" src="./images/uploadSelect.png" style="width: 32px;"></span>
         -->
-        
+
           <label for="file_input" id="uploadLabel">
             <span id=uploadSpan>
               Upload Video
-              <img id="uploadImg" src="./images/uploadSelect.png" style ="width: 32px;"/>  
+              <img id="uploadImg" src="./images/uploadSelect.png" style ="width: 32px;"/>
             </span>
             </label>
             <input type="file" id="file_input" name="myfile" hidden>
@@ -38,7 +38,7 @@
             <!--<video></video>-->
             <video id="VideoPlaceholder"  style="width: 100%" controls>
               Your browser does not support the video tag
-            </video>
+            </video>fileButton
         </div>
         <div class="feedbackDisplay">
             <span style="font-size: 20px;">Feedback</span>
