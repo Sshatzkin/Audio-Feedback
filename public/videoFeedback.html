@@ -19,17 +19,18 @@
     <link rel="manifest" href="./images/favicon/site.webmanifest" />
 
     <link rel="stylesheet" href="./css/videoCommentPage.css"/>
+    <link rel="stylesheet" href="./css/navBar.css"/>
 </head>
 <body>
-    <nav class="navbar navbar-expand navbar-light bg-light">
-      <a class="navbar-brand" href="index.html" style="color: #06ddf7;"><img src="./images/favicon/favicon-32x32.png" style="margin-right: .5rem; margin-left: .5rem;"> Playback</a>
+    <nav class="navbar navbar-expand navbar-light">
+      <a id="navbarTitle" class="navbar-brand" href="index.html"><img src="./images/favicon/favicon-32x32.png" style="margin-right: .5rem; margin-left: .5rem;"> Playback</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="./piano.html"><img src="images/piano.png" class="nav-icon" style="width: 2rem;"></a>
-          <a class="nav-item nav-link" id="logout"><img src="./images/logout.png" class="nav-icon" id="logout" style="width: 2rem;"></a>
+          <a class="nav-item nav-link" href="./piano.html"><img id = "toPianoIcon" src="images/piano.png" class="nav-icon" style="width: 2rem;"></a>
+          <a class="nav-item nav-link" id="logout"><img src="./images/logout.png" class="nav-icon" id="logoutIcon" style="width: 2rem;"></a>
         </div>
       </div>
     </nav>
@@ -47,8 +48,8 @@
         <ul>
             <li><span style="width: auto; margin-left: -42px; text-align: center;">Files</span>
                 <ul id="fileList">
-                    <li class = "fileButton"><a href="#">video1</a></li>
-                    <li class="fileButton"><a href="#">video2</a></li>
+                    <li class = "fileButton">video1</li>
+                    <li class="fileButton">video2</li>
                 </ul>
             </li>
         </ul>
@@ -97,7 +98,9 @@
       </div>
       <div class="typeInFeedback" style="left: 289px; top: 533px">
         <textarea id="commentInput" placeholder="Type in your feedback..."></textarea>
-        <img src="./images/enter.png" />
+        <!--
+          Commented this out just because we are currently using the timestamp button as enter
+          <img src="./images/enter.png" /> -->
       </div>
     </div>
 

@@ -110,7 +110,7 @@ listRef.listAll().then(function(res) {
 
   var html_list = '';
   res.items.forEach(function(itemRef) {
-    html_list += '<li class="fileButton"><a href=#>' + itemRef.name + '</a></li>';
+    html_list += '<li class="fileButton">' + itemRef.name + '</li>';
     document.getElementById('fileList').innerHTML = html_list;
     // All the items under listRef.
   });

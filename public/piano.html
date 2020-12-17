@@ -33,6 +33,7 @@
     <link rel="manifest" href="./images/favicon/site.webmanifest" />
 
     <link rel="stylesheet" href="./css/pianoPage.css" />
+    <link rel="stylesheet" href="./css/navBar.css"/>
   </head>
   <body>
     <!-- <header style="border-bottom: 3px solid #06ddf7;">
@@ -43,34 +44,23 @@
     <img class="videoNav" src="images/videoNav.png">
 </header> -->
 
-    <nav class="navbar navbar-expand navbar-light bg-light">
-      <a class="navbar-brand" href="index.html" style="color: #06ddf7"
+    <nav class="navbar navbar-expand navbar-light">
+      <a id="navbarTitle" class="navbar-brand" href="index.html"
         ><img
           src="./images/favicon/favicon-32x32.png"
           style="margin-right: 0.5rem; margin-left: 0.5rem"
         />
         Playback</a
       >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="./videoFeedback.html"
-            ><img class="nav-icon" src="images/videoNav.png"
+            ><img id = "toVideoIcon" class="nav-icon" src="images/videoNav.png"
           /></a>
-          <a class="nav-item nav-link"
+          <a class="nav-item nav-link" id = "logout"
             ><img
               class="nav-icon"
-              id="logout"
+              id="logoutIcon"
               src="./images/logout.png"
               onclick="window.location.href='./index.html'"
           /></a>

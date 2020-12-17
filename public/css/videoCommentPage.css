@@ -11,23 +11,7 @@ body{
 div{
   position: fixed;
 }
-header img{
-  width: 33px;
-  float: right;
-  padding-right: 5px;
-}
-header .logout:hover{
-  content: url('../images/logoutSelect.png');
-  cursor:pointer;
-}
-header .piano:hover{
-  content: url('../images/pianoSelect.png');
-  cursor:pointer;
-}
-header .videoNav:hover{
-  content: url('../images/videoNavSelect.png');
-  cursor:pointer;
-}
+/* SIDEBAR CSS */
 .sideBar{
   height: 100%;
   position: fixed;
@@ -49,8 +33,28 @@ header .videoNav:hover{
   color: #039eb0;
   cursor:pointer;
 }
+.sideBar .fileButton:hover{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  color: #039eb0;
+  cursor:pointer;
+}
+
+.fileButton{
+  width: auto;
+  float: none;
+  background-color: #ffffff;
+  margin-left: -80px;
+  text-align: center;
+  border-bottom: 1px solid #ccc7c7;
+
+}
+
 #uploadSpan:active{
   background: #f3f3f3;
+}
+#uploadLabel{
+  width: 107%;
+  margin-left: -15px;
 }
 .sideBar img{
   width: 35px;
@@ -58,6 +62,8 @@ header .videoNav:hover{
   margin-left: 8px;
   margin-top: -8px;
 }
+
+/* VIDEO & FEEDBACK CSS */
 .main .video{
   width: 600px;
   height: 300px;
@@ -110,7 +116,8 @@ header .videoNav:hover{
   padding: 15px 20px;
 }
 .buttons img{
-  width: 33px;
+  width: 15%;
+  height: auto;
   border: 1px solid #ccc7c7;
   padding: 3px 25px;
   border-radius: 10px;
@@ -174,16 +181,11 @@ a{
   width: 92%;
   word-wrap: break-word;
 }
-a:hover{
+/*a:hover{
   background-color: #f3f3f3;
-}
-ul li ul li{
-  float: none;
-  background-color: #ffffff;
-  margin-left: -80px;
-  text-align: center;
-  border-bottom: 1px solid #ccc7c7;
-}
+}*/
+
+/*
 ul li ul{
   opacity: 1;
   transition: opacity 500ms 0s;
@@ -191,30 +193,6 @@ ul li ul{
 ul li:hover ul{
   opacity: 1;
   transition: opacity 500ms 0s;
-}
+}*/
 
-.navbar-collapse{
-  justify-content: flex-end;
-}
 
-#uploadLabel{
-  width: 107%;
-  margin-left: -15px;
-}
-
-.fileButton{
-  width: auto;
-}
-
-.nav-item{
-  margin-right: 1rem;
-}
-
-.navbar-brand{
-  width: auto;
-}
-
-.nav-icon{
-  width: 2rem !important;
-  height: 2rem !important;
-}
