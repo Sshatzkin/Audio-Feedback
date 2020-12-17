@@ -88,98 +88,122 @@ blackSound9.src = "../pianoKeySound/eeee.m4a";
 document.addEventListener("keydown", (e) => {
   switch (e.code) {
     case "Backquote":
+      document.getElementById("C.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound0.loop = true;
       whiteSound0.play();
       break;
     case "KeyQ":
+      document.getElementById("D.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound1.loop = true;
       whiteSound1.play();
       break;
     case "KeyW":
+      document.getElementById("E.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound2.loop = true;
       whiteSound2.play();
       break;
     case "KeyE":
+      document.getElementById("F.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound3.loop = true;
       whiteSound3.play();
       break;
     case "KeyR":
+      document.getElementById("G.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound4.loop = true;
       whiteSound4.play();
       break;
     case "KeyT":
+      document.getElementById("A.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound5.loop = true;
       whiteSound5.play();
       break;
     case "KeyY":
+      document.getElementById("B.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound6.loop = true;
       whiteSound6.play();
       break;
     case "KeyU":
+      document.getElementById("CC.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound7.loop = true;
       whiteSound7.play();
       break;
     case "KeyI":
+      document.getElementById("DD.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound8.loop = true;
       whiteSound8.play();
       break;
     case "KeyO":
+      document.getElementById("EE.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound9.loop = true;
       whiteSound9.play();
       break;
     case "KeyP":
+      document.getElementById("FF.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound10.loop = true;
       whiteSound10.play();
       break;
     case "BracketLeft":
+      document.getElementById("GG.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound11.loop = true;
       whiteSound11.play();
       break;
     case "BracketRight":
+      document.getElementById("AA.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound12.loop = true;
       whiteSound12.play();
       break;
     case "Enter":
+      document.getElementById("BB.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
       whiteSound13.loop = true;
       whiteSound13.play();
       break;
     case "Digit1":
+      document.getElementById("aaa.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 10px";
       blackSound0.loop = true;
       blackSound0.play();
       break;
     case "Digit2":
+      document.getElementById("bbb.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 10px";
       blackSound1.loop = true;
       blackSound1.play();
       break;
     case "Digit4":
+      document.getElementById("ccc.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 10px";
       blackSound2.loop = true;
       blackSound2.play();
       break;
     case "Digit5":
+      document.getElementById("ddd.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 10px";
       blackSound3.loop = true;
       blackSound3.play();
       break;
     case "Digit6":
+      document.getElementById("eee.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 10px";
       blackSound4.loop = true;
       blackSound4.play();
       break;
     case "Digit8":
+      document.getElementById("aaaa.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 10px";
       blackSound5.loop = true;
       blackSound5.play();
       break;
     case "Digit9":
+      document.getElementById("bbbb.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 10px";
       blackSound6.loop = true;
       blackSound6.play();
       break;
     case "Minus":
+      document.getElementById("cccc.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 10px";
       blackSound7.loop = true;
       blackSound7.play();
       break;
     case "Equal":
+      document.getElementById("dddd.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 10px";
       blackSound8.loop = true;
       blackSound8.play();
       break;
     case "Backslash":
+      document.getElementById("eeee.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 10px";
       blackSound9.loop = true;
       blackSound9.play();
       break;
@@ -190,74 +214,98 @@ document.addEventListener("keyup", (e) => {
   switch (e.code) {
     case "Backquote":
         whiteSound0.loop = false;
+        document.getElementById("C.m4a").style.boxShadow = null;
         break;
       case "KeyQ":
+        document.getElementById("D.m4a").style.boxShadow = null;
         whiteSound1.loop = false;
         break;
       case "KeyW":
+        document.getElementById("E.m4a").style.boxShadow = null;
         whiteSound2.loop = false;
         break;
       case "KeyE":
+        document.getElementById("F.m4a").style.boxShadow = null;
         whiteSound3.loop = false;
         break;
       case "KeyR":
+        document.getElementById("G.m4a").style.boxShadow = null;
         whiteSound4.loop = false;
         break;
       case "KeyT":
+        document.getElementById("A.m4a").style.boxShadow = null;
         whiteSound5.loop = false;
         break;
       case "KeyY":
+        document.getElementById("B.m4a").style.boxShadow = null;
         whiteSound6.loop = false;
         break;
       case "KeyU":
+        document.getElementById("CC.m4a").style.boxShadow = null;
         whiteSound7.loop = false;
         break;
       case "KeyI":
+        document.getElementById("DD.m4a").style.boxShadow = null;
         whiteSound8.loop = false;
         break;
       case "KeyO":
+        document.getElementById("EE.m4a").style.boxShadow = null;
         whiteSound9.loop = false;
         break;
       case "KeyP":
+        document.getElementById("FF.m4a").style.boxShadow = null;
         whiteSound10.loop = false;
         break;
       case "BracketLeft":
+        document.getElementById("GG.m4a").style.boxShadow = null;
         whiteSound11.loop = false;
         break;
       case "BracketRight":
+        document.getElementById("AA.m4a").style.boxShadow = null;
         whiteSound12.loop = false;
         break;
       case "Enter":
+        document.getElementById("BB.m4a").style.boxShadow = null;
         whiteSound13.loop = false;
         break;
       case "Digit1":
+        document.getElementById("aaa.m4a").style.boxShadow = null;
         blackSound0.loop = false;
         break;
       case "Digit2":
+        document.getElementById("bbb.m4a").style.boxShadow = null;
         blackSound1.loop = false;
         break;
       case "Digit4":
+        document.getElementById("ccc.m4a").style.boxShadow = null;
         blackSound2.loop = false;
         break;
       case "Digit5":
+        document.getElementById("ddd.m4a").style.boxShadow = null;
         blackSound3.loop = false;
         break;
       case "Digit6":
+        document.getElementById("eee.m4a").style.boxShadow = null;
         blackSound4.loop = false;
         break;
       case "Digit8":
+        document.getElementById("aaaa.m4a").style.boxShadow = null;
         blackSound5.loop = false;
         break;
       case "Digit9":
+        document.getElementById("bbbb.m4a").style.boxShadow = null;
         blackSound6.loop = false;
         break;
       case "Minus":
+        document.getElementById("cccc.m4a").style.boxShadow = null;
         blackSound7.loop = false;
         break;
       case "Equal":
+        document.getElementById("dddd.m4a").style.boxShadow = null;
         blackSound8.loop = false;
         break;
       case "Backslash":
+        document.getElementById("eeee.m4a").style.boxShadow = null;
         blackSound9.loop = false;
         break;
     }
