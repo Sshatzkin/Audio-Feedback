@@ -1,3 +1,4 @@
+
 html,
 body {
   width: 100%;
@@ -20,63 +21,64 @@ header .videoNav:hover {
   content: url("../images/videoNavSelect.png");
   cursor: pointer;
 }
-.blackKey,
-.whiteKey {
-  list-style: none;
-  margin: 50px auto 30px auto;
-  width: 120%;
-  display: flex;
-  cursor: pointer;
+
+.blackKey, .whiteKey {
+    list-style: none;
+    margin: 50px auto 30px auto;
+    width: 120%;
+    display: flex;
+    cursor: pointer;
 }
-.blackKey .item {
-  height: 140px;
-  width: 3.1%;
-  background: black;
-}
-.blackKey .item span {
-  color: white;
-}
-.item {
-  width: 4.3%;
-  height: 250px;
-  background: #fff;
-  text-align: center;
-  margin-right: 3px;
-  user-select: none;
-  position: relative;
-  border: 1px solid;
-  border-radius: 0 0 6px 6px;
-}
-.blackKey .item:hover {
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 10px 10px;
-}
-.whiteKey .item:hover {
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 10px 8px;
-}
-.blackKey .item:active {
-  background-color: #bdc5c5;
-}
-.whiteKey .item:active {
-  background-color: #bdc5c5;
-}
-.item span {
-  position: absolute;
-  left: 50%;
-  bottom: 15px;
-  transform: translateX(-50%);
-  display: block;
-}
-.item .bottom::after {
-  content: ".";
-  font-size: 20px;
-  font-weight: bold;
-  display: block;
-  position: absolute;
-  top: 3px;
-  left: 50%;
-  transform: translateX(-50%);
+.blackKey .pianoKey{
+    height: 140px;
+    width: 3.1%;
+    background: black;
 }
 
+.blackKey .pianoKey span{
+    color: white;
+}
+.pianoKey {
+    width: 4.3%;
+    height: 250px;
+    background: #fff;
+    text-align: center;
+    margin-right: 3px;
+    user-select: none;
+    position: relative;
+    border: 1px solid;
+    border-radius: 0 0 6px 6px;
+}
+.blackKey .pianoKey:hover{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 10px 10px;
+}
+.whiteKey .pianoKey:hover{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 10px 8px;
+}
+
+.blackKey .pianoKey:active{
+    background-color: #bdc5c5;
+}
+.whiteKey .pianoKey:active{
+    background-color: #bdc5c5;
+}
+.pianoKey span {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    display: block;
+}
+.pianoKey .bottom::after {
+    content: ".";
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 body{
     font-family: 'Avenir';
 }
@@ -91,6 +93,7 @@ body{
 
 .nav-item{
     margin-right: 1rem;
+
 }
 
 .nav-icon{
