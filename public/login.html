@@ -15,17 +15,38 @@
   <title>Login</title>
 </head>
 <body>
-    <div class="full-page-container">
-        <div class="auth-card">
-            <h3 class="auth-header">
-                Login
-            </h3>
-            <input type="email" placeholder="Email" class="input-field " style="margin-top: 2rem;">
-            <input type="password" placeholder="Password" class="input-field">
-            <button class="btn btn-success input-field" onclick="window.location.href='./videoFeedback.html'">Log in</button>
-        </div>
+  <div class="full-page-container">
+    <div class="auth-card">
+      <h3 class="auth-header">Login</h3>
+      <input
+        type="email"
+        id="login-email"
+        placeholder="Email"
+        class="input-field"
+        style="margin-top: 2rem"
+      />
+      <input type="password" id="login-password" placeholder="Password" class="input-field" />
+      <button
+        class="btn btn-success input-field"
+        id="login-btn"
+      >
+        Log in
+      </button>
     </div>
+  </div>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/8.2.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/8.2.0/firebase-analytics.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+  <script src="/__/firebase/8.2.0/firebase-auth.js"></script>
+
+  <script src="./scripts/auth/login.js" charset="utf-8"></script>
 
   <!--Bootstrap JS-->
   <script
