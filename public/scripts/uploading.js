@@ -22,6 +22,32 @@ function processID(id){
   return newid;
 }
 
+/*function getVideoId(filename){
+  var filepath = files_folder + filename;
+  var fileRef = storageRef.child(filepath);
+  console.log(fileRef);
+  fileRef.getMetadata().then(function(metadata) {
+    console.log(metadata);
+    var videoID = processID(metadata.md5Hash);
+    return videoID;
+  })
+  .catch((error) => {
+    return "WRONG ID";
+  });
+}*/
+
+function formatTime (seconds){
+  var minutes = Math.floor(seconds / 60);
+  var seconds = Math.floor(seconds - (minutes * 60));
+
+  if (minutes < 10) {minutes = "0"+minutes;}
+  if (seconds < 10) {seconds = "0"+seconds;}
+  return minutes+':'+seconds;
+}
+
+
+
+
 /*
  * UPLOADING VIDEOS __________________
  */
@@ -62,7 +88,6 @@ actualBtn.addEventListener('change', function(){
   };
 
   image_ref.put(file, metadata).then(function(snapshot) {
-    console.log(snapshot.metadata.md5Hash);
     alert("File uploaded!");
     writeVideotoDB(snapshot.metadata.name, snapshot.metadata.md5Hash, "USERNAME GOES HERE");
   });
@@ -121,7 +146,6 @@ function setVideo (filename){
   var filepath = files_folder + filename;
   var fileRef = storageRef.child(filepath);
   var metadata = fileRef.getMetadata().then(function(metadata){
-    console.log(metadata);
   });
   fileRef.getDownloadURL().then(function(url) {
     // `url` is the download URL for 'images/stars.jpg'
@@ -133,6 +157,7 @@ function setVideo (filename){
 
     var videoTitleSpan = document.getElementById('VideoTitleSpan');
     videoTitleSpan.innerHTML = filename;
+    setCommentListner(filename);
   }).catch(function(error) {
     // Handle any errors
   });
@@ -143,9 +168,65 @@ setVideo(default_filename);
 /*
  * Display Comments __________________
  */
-function displayComments (metadata){
+var commentsContainer = document.getElementById("commentsBox");
+function displayComment (data){  
+  // Get values from data
+  var text = data.exportVal().text;
+  var time = formatTime(data.exportVal().timestamp);
+  
+  // Create new li
 
+  // Create new span
+  var newSpan = document.createElement("SPAN");
+  newSpan.innerHTML = time;
+
+  // Append span
+  commentsContainer.appendChild(newSpan);
+
+  // Create new p
+  var newP = document.createElement("P");
+  newP.innerText = text;
+
+  // Append p
+  commentsContainer.appendChild(newP);
+  return;
 }
+
+/*
+function setCommentsOnce(filename){
+  var videoID = getVideoId(filename);
+  var filepath = 'Videos/' + videoID +"/comments/";
+  var commentsRef = database.ref(filepath);
+  //var query = commentsRef.orderByChild("timestamp");
+  //query.addListnerForSingleValueEvent(queryValueListener);
+  
+  var data = commentsRef.orderByChild('timestamp');
+  displayComment(data);
+}*/
+
+function setCommentListner(filename){
+  var filepath = files_folder + filename;
+  var fileRef = storageRef.child(filepath);
+  // Fetch metadata to get video_ID
+  fileRef.getMetadata().then(function(metadata) {
+    var videoID = processID(metadata.md5Hash);
+    var filepath = 'Videos/' + videoID +"/comments/";
+    var commentsRef = database.ref(filepath).orderByChild('timestamp');
+    // Empty out comments container first
+    commentsContainer.innerHTML = "";
+    commentsRef.on('child_added', (data) => {
+      displayComment(data);
+      //addCommentElement(postElement, data.key, data.val().text, data.val().author);
+    });
+  })
+  .catch((error) => {
+    return "WRONG ID";
+  });
+
+  
+}
+
+//setCommentListner(default_filename);
 
 /*
  * SET COMMENT __________________
@@ -154,8 +235,6 @@ function writeCommentToDB(videoRef,time, comment){
   videoRef.getMetadata().then(function(metadata) {
     var videoID = processID(metadata.md5Hash);
     var filepath = 'Videos/' + videoID +"/comments/";
-    console.log(videoID);
-    console.log(filepath);
     var newPostRef = firebase.database().ref(filepath).push()
     newPostRef.set({
       timestamp: time,
@@ -176,24 +255,6 @@ function setTimestamp (filename){
 
   var commentText = document.getElementById("commentInput").value;
   writeCommentToDB(videoRef, videoTime, commentText);
-  
-  // Create metadata file to update
-  /*var newMetadata = {
-    customMetadata: {
-      "Note1" : videoTime + ":" + commentText,
-    } 
-  }
-  
-  // Update metadata properties
-  videoRef.updateMetadata(newMetadata).then(function(metadata) {
-    // Updated metadata for image is returned in the Promise
-
-    console.log(metadata.customMetadata);
-    displayComments(metadata);
-  }).catch(function(error) {
-    // Uh-oh, an error occurred!
-  });
-  */
 }
 
 function addTimestampHandler(e){
