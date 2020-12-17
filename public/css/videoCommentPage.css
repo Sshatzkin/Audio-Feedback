@@ -84,12 +84,12 @@ header .logout:hover{
   content: url("../images/searchSelect.png");
   cursor:pointer;
 }
-.feedbackDisplay .texts{
+.feedbackDisplay #commentsBox{
   overflow-y: auto;
-  margin-top: 68px;
-  margin-left: 22px;
-  height: 294px;
-  width: 367px;
+  margin-top: 10px;
+  margin-left: 15px;
+  height: 352px;
+  width: 400px;
 }
 .feedbackDisplay .texts p{
   text-align: justify;
@@ -182,4 +182,3 @@ ul li ul{
 ul li:hover ul{
   opacity: 1;
   transition: opacity 500ms 0s;
-}
