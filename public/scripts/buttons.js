@@ -4,10 +4,10 @@ function init_buttons(){
   //Change the uploading image in the upload span
   var uploadSpan = document.getElementById("uploadSpan");
   uploadSpan.addEventListener("mouseover", function(){
-      document.getElementById("uploadImg").src = "../images/upload.png"
+      document.getElementById("uploadImg").src = "./images/upload.png"
   },false);
   uploadSpan.addEventListener("mouseout", function(){
-      document.getElementById("uploadImg").src = "../images/uploadSelect.png"
+      document.getElementById("uploadImg").src = "./images/uploadSelect.png"
   },false);
 
   //Popover textbox for the buttons

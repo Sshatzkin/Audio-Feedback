@@ -169,15 +169,16 @@ setVideo(default_filename);
  * Display Comments __________________
  */
 var commentsContainer = document.getElementById("commentsBox");
-function displayComment (data){  
+function displayComment (data){
   // Get values from data
   var text = data.exportVal().text;
   var time = formatTime(data.exportVal().timestamp);
-  
+
 
   // Create new span
   var newSpan = document.createElement("SPAN");
   newSpan.innerHTML = time;
+  newSpan.style.display = "block";
 
   // Append span
   commentsContainer.appendChild(newSpan);
@@ -233,7 +234,7 @@ function writeCommentToDB(videoRef,time, comment){
 function setTimestamp (filename){
   // Get reference for the video
   var videoRef = storageRef.child(files_folder + filename);
-  
+
   var videoElement = document.getElementById('VideoPlaceholder');
   var videoTime = videoElement.currentTime;
 
