@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f319536-81ae-4472-9247-06f2c46aa161" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Audio-Feedback.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/addTimeStamp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/enter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/enterSelect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/haha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/logout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/logoutSelect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/profilePic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/searchSelect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/upload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/uploadSelect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/videoFeedback.html" afterDir="false" />
-    </list>
+    <list default="true" id="3f319536-81ae-4472-9247-06f2c46aa161" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +56,7 @@
       <workItem from="1608106136877" duration="20593000" />
       <workItem from="1608129467576" duration="56000" />
       <workItem from="1608129531820" duration="17000" />
-      <workItem from="1608129589425" duration="1818000" />
+      <workItem from="1608129589425" duration="2225000" />
     </task>
     <servers />
   </component>
