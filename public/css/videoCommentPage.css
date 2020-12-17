@@ -110,7 +110,8 @@ header .videoNav:hover{
   padding: 15px 20px;
 }
 .buttons img{
-  width: 33px;
+  width: 15%;
+  height: auto;
   border: 1px solid #ccc7c7;
   padding: 3px 25px;
   border-radius: 10px;
