@@ -64,26 +64,16 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-        <a class="nav-item nav-link" href="./videoFeedback.html">Feedback</a>
-          <a class="nav-item nav-link" href="./piano.html">Piano</a>
-          <div class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Account
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Profile</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" id="logout">Logout</a>
-            </div>
-          </div>
+          <a class="nav-item nav-link" href="./videoFeedback.html"
+            ><img class="nav-icon" src="images/videoNav.png"
+          /></a>
+          <a class="nav-item nav-link"
+            ><img
+              class="nav-icon"
+              id="logout"
+              src="./images/logout.png"
+              onclick="window.location.href='./index.html'"
+          /></a>
         </div>
       </div>
     </nav>
@@ -170,3 +160,4 @@
 </html>
 
 <script src="scripts/getPianoSound.js"></script>
+<script src="./scripts/auth/logout.js" charset="utf-8"></script>

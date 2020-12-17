@@ -92,3 +92,8 @@ body{
 .nav-item{
     margin-right: 1rem;
 }
+
+.nav-icon{
+    width: 2rem !important;
+    height: 2rem !important;
+}

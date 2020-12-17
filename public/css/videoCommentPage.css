@@ -213,3 +213,8 @@ ul li:hover ul{
 .navbar-brand{
   width: auto;
 }
+
+.nav-icon{
+  width: 2rem !important;
+  height: 2rem !important;
+}
