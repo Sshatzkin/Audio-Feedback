@@ -181,8 +181,6 @@ ul li ul li{
   float: none;
   background-color: #ffffff;
   margin-left: -80px;
-  width: 148%;
-  width: fit-content;
   text-align: center;
   border-bottom: 1px solid #ccc7c7;
 }
@@ -201,5 +199,9 @@ margin-left: 85%;
 
 #uploadLabel{
   width: 107%;
-  margin-left: -1rem;
+  margin-left: -15px;
+}
+
+.fileButton{
+  width: auto;
 }
