@@ -97,7 +97,6 @@ if(mode == "player"){
     });
   }
 
-
   whiteSound0 = document.createElement("audio");
   whiteSound0.src = "../pianoKeySound/C.m4a";
   whiteSound1 = document.createElement("audio");
@@ -159,121 +158,166 @@ if(mode == "player"){
     switch (e.code) {
       case "Backquote":
         updateKey(whiteKeys[0], true);
+        document.getElementById("C.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound0.loop = true;
         whiteSound0.play();
         break;
       case "KeyQ":
         updateKey(whiteKeys[1], true);
+        document.getElementById("D.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound1.loop = true;
         whiteSound1.play();
         break;
       case "KeyW":
         updateKey(whiteKeys[2], true);
+        document.getElementById("E.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound2.loop = true;
         whiteSound2.play();
         break;
       case "KeyE":
-        updateKey(whiteKeys[3], true);
+        var key = whiteKeys[3];
+        updateKey(key, true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound3.loop = true;
         whiteSound3.play();
         break;
       case "KeyR":
+        var key = whiteKeys[4];
         updateKey(whiteKeys[4], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound4.loop = true;
         whiteSound4.play();
         break;
       case "KeyT":
+        var key = whiteKeys[5];
         updateKey(whiteKeys[5], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound5.loop = true;
         whiteSound5.play();
         break;
       case "KeyY":
+        var key = whiteKeys[6];
         updateKey(whiteKeys[6], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound6.loop = true;
         whiteSound6.play();
         break;
       case "KeyU":
+        var key = whiteKeys[7];
         updateKey(whiteKeys[7], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound7.loop = true;
         whiteSound7.play();
         break;
       case "KeyI":
+        var key = whiteKeys[8];
         updateKey(whiteKeys[8], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound8.loop = true;
         whiteSound8.play();
         break;
       case "KeyO":
+        var key = whiteKeys[9];
         updateKey(whiteKeys[9], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound9.loop = true;
         whiteSound9.play();
         break;
       case "KeyP":
+        var key = whiteKeys[10];
         updateKey(whiteKeys[10], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound10.loop = true;
         whiteSound10.play();
         break;
       case "BracketLeft":
+        var key = whiteKeys[11];
         updateKey(whiteKeys[11], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound11.loop = true;
         whiteSound11.play();
         break;
       case "BracketRight":
+        var key = whiteKeys[12];
         updateKey(whiteKeys[12], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound12.loop = true;
         whiteSound12.play();
         break;
       case "Enter":
+        var key = whiteKeys[13];
         updateKey(whiteKeys[13], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound13.loop = true;
         whiteSound13.play();
         break;
       case "Digit1":
+        var key = blackKeys[0];
         updateKey(blackKeys[0], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         blackSound0.loop = true;
         blackSound0.play();
         break;
       case "Digit2":
+        var key = blackKeys[1];
         updateKey(blackKeys[1], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         blackSound1.loop = true;
         blackSound1.play();
         break;
       case "Digit4":
+        var key = blackKeys[2];
         updateKey(blackKeys[2], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         blackSound2.loop = true;
         blackSound2.play();
         break;
       case "Digit5":
+        var key = blackKeys[3];
         updateKey(blackKeys[3], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         blackSound3.loop = true;
         blackSound3.play();
         break;
       case "Digit6":
+        var key = blackKeys[4];
         updateKey(blackKeys[4], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         blackSound4.loop = true;
         blackSound4.play();
         break;
       case "Digit8":
+        var key = blackKeys[5];
         updateKey(blackKeys[5], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         blackSound5.loop = true;
         blackSound5.play();
         break;
       case "Digit9":
+        var key = blackKeys[6];
         updateKey(blackKeys[6], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         blackSound6.loop = true;
         blackSound6.play();
         break;
       case "Minus":
+        var key = blackKeys[7];
         updateKey(blackKeys[7], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         blackSound7.loop = true;
         blackSound7.play();
         break;
       case "Equal":
+        var key = blackKeys[8];
         updateKey(blackKeys[8], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         blackSound8.loop = true;
         blackSound8.play();
         break;
       case "Backslash":
+        var key = blackKeys[9];
         updateKey(blackKeys[9], true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         blackSound9.loop = true;
         blackSound9.play();
         break;
@@ -283,99 +327,147 @@ if(mode == "player"){
   document.addEventListener("keyup", (e) => {
     switch (e.code) {
       case "Backquote":
+          var key = whiteKeys[0];
           updateKey(whiteKeys[0], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound0.loop = false;
           break;
         case "KeyQ":
+          var key = whiteKeys[1];
           updateKey(whiteKeys[1], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound1.loop = false;
           break;
         case "KeyW":
+          var key = whiteKeys[2];
           updateKey(whiteKeys[2], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound2.loop = false;
           break;
         case "KeyE":
+          var key = whiteKeys[3];
           updateKey(whiteKeys[3], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound3.loop = false;
           break;
         case "KeyR":
+          var key = whiteKeys[4];
           updateKey(whiteKeys[4], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound4.loop = false;
           break;
         case "KeyT":
+          var key = whiteKeys[5];
           updateKey(whiteKeys[5], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound5.loop = false;
           break;
         case "KeyY":
+          var key = whiteKeys[6];
           updateKey(whiteKeys[6], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound6.loop = false;
           break;
         case "KeyU":
+          var key = whiteKeys[7];
           updateKey(whiteKeys[7], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound7.loop = false;
           break;
         case "KeyI":
+          var key = whiteKeys[8];
           updateKey(whiteKeys[8], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound8.loop = false;
           break;
         case "KeyO":
+          var key = whiteKeys[9];
           updateKey(whiteKeys[9], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound9.loop = false;
           break;
         case "KeyP":
+          var key = whiteKeys[10];
           updateKey(whiteKeys[10], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound10.loop = false;
           break;
         case "BracketLeft":
+          var key = whiteKeys[11];
           updateKey(whiteKeys[11], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound11.loop = false;
           break;
         case "BracketRight":
+          var key = whiteKeys[12];
           updateKey(whiteKeys[12], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound12.loop = false;
           break;
         case "Enter":
+          var key = whiteKeys[13];
           updateKey(whiteKeys[13], false);
+          document.getElementById(key).style.boxShadow = null;
           whiteSound13.loop = false;
           break;
         case "Digit1":
-          updateKey(blackKeys[0], false);
+          var key = blackKeys[0];
+          updateKey(key, false);
+          document.getElementById(key).style.boxShadow = null;
           blackSound0.loop = false;
           break;
         case "Digit2":
-          updateKey(blackKeys[1], false);
+          var key = blackKeys[1];
+          updateKey(key, false);
+          document.getElementById(key).style.boxShadow = null;
           blackSound1.loop = false;
           break;
         case "Digit4":
+          var key = blackKeys[2];
           updateKey(blackKeys[2], false);
+          document.getElementById(key).style.boxShadow = null;
           blackSound2.loop = false;
           break;
         case "Digit5":
+          var key = blackKeys[3];
           updateKey(blackKeys[3], false);
+          document.getElementById(key).style.boxShadow = null;
           blackSound3.loop = false;
           break;
         case "Digit6":
+          var key = blackKeys[4];
           updateKey(blackKeys[4], false);
+          document.getElementById(key).style.boxShadow = null;
           blackSound4.loop = false;
           break;
         case "Digit8":
+          var key = blackKeys[5];
           updateKey(blackKeys[5], false);
+          document.getElementById(key).style.boxShadow = null;
           blackSound5.loop = false;
           break;
         case "Digit9":
+          var key = blackKeys[6];
           updateKey(blackKeys[6], false);
+          document.getElementById(key).style.boxShadow = null;
           blackSound6.loop = false;
           break;
         case "Minus":
+          var key = blackKeys[7];
           updateKey(blackKeys[7], false);
+          document.getElementById(key).style.boxShadow = null;
           blackSound7.loop = false;
           break;
         case "Equal":
+          var key = blackKeys[8];
           updateKey(blackKeys[8], false);
+          document.getElementById(key).style.boxShadow = null;
           blackSound8.loop = false;
           break;
         case "Backslash":
+          var key = blackKeys[9];
           updateKey(blackKeys[9], false);
+          document.getElementById(key).style.boxShadow = null;
           blackSound9.loop = false;
           break;
       }
