@@ -157,20 +157,23 @@ if(mode == "player"){
   document.addEventListener("keydown", (e) => {
     switch (e.code) {
       case "Backquote":
+        var key = whiteKeys[0];
         updateKey(whiteKeys[0], true);
-        document.getElementById("C.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound0.loop = true;
         whiteSound0.play();
         break;
       case "KeyQ":
+        var key = whiteKeys[1];
         updateKey(whiteKeys[1], true);
-        document.getElementById("D.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound1.loop = true;
         whiteSound1.play();
         break;
       case "KeyW":
-        updateKey(whiteKeys[2], true);
-        document.getElementById("E.m4a").style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
+        var key = whiteKeys[2];
+        updateKey(key, true);
+        document.getElementById(key).style.boxShadow = "rgba(0, 0, 0, 0.12) 0px 0px 10px 8px";
         whiteSound2.loop = true;
         whiteSound2.play();
         break;
