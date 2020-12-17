@@ -3,15 +3,15 @@ header img{
   float: right;
   padding-right: 5px;
 }
-header .logout:hover{
+#logoutIcon:hover{
   content: url('../images/logoutSelect.png');
   cursor:pointer;
 }
-header .piano:hover{
+#toPianoIcon:hover{
   content: url('../images/pianoSelect.png');
   cursor:pointer;
 }
-header .videoNav:hover{
+#toVideoIcon:hover{
   content: url('../images/videoNavSelect.png');
   cursor:pointer;
 }
@@ -41,3 +41,4 @@ nav {
   width: 2rem !important;
   height: 2rem !important;
 }
+
