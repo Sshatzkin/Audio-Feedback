@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Piano</title>
+</head>
+<body>
+    <header style="border-bottom: 3px solid #06ddf7;">
+        <span style="padding-left: 15px; font-size: 30px">Piano</span>
+        <img class="logout" src="../images/logout.png">
+        <img src="../images/profilePic.png">
+    </header>
+    <div class="piano-box" style="margin-top: 14%;margin-left: 12%;margin-right: -12%;">
+        <div>
+            <ul class="whiteKey">
+                <li class="item" data-key="C"><span class="bottom">1</span></li>
+                <li class="item" data-key="D"><span class="bottom">2</span></li>
+                <li class="item" data-key="E"><span class="bottom">3</span></li>
+                <li class="item" data-key="F"><span class="bottom">4</span></li>
+                <li class="item" data-key="G"><span class="bottom">5</span></li>
+                <li class="item" data-key="A"><span class="bottom">6</span></li>
+                <li class="item" data-key="B"><span class="bottom">7</span></li>
+                <li class="item" data-key="CC"><span>1</span></li>
+                <li class="item" data-key="DD"><span>2</span></li>
+                <li class="item" data-key="EE"><span>3</span></li>
+                <li class="item" data-key="FF"><span>4</span></li>
+                <li class="item" data-key="GG"><span>5</span></li>
+                <li class="item" data-key="AA"><span>6</span></li>
+                <li class="item" data-key="BB"><span>7</span></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="blackKey" style="margin-top: -282px;">
+                <li class="item" data-key="aaa" style="margin-left: 3%;"><span class="bottom">1'</span></li>
+                <li class="item" data-key="bbb" style="margin-left: 1.3%;"><span class="bottom">2'</span></li>
+                <li class="item" data-key="ccc" style="margin-left: 5.8%;"><span class="bottom">4'</span></li>
+                <li class="item" data-key="ddd" style="margin-left: 1%;"><span class="bottom">5'</span></li>
+                <li class="item" data-key="eee" style="margin-left: 1.3%;"><span class="bottom">6'</span></li>
+                <li class="item" data-key="aaa" style="margin-left: 6%;"><span class="bottom">1'</span></li>
+                <li class="item" data-key="bbb" style="margin-left: 1.3%;"><span class="bottom">2'</span></li>
+                <li class="item" data-key="ccc" style="margin-left: 5.8%;"><span class="bottom">4'</span></li>
+                <li class="item" data-key="ddd" style="margin-left: 1%;"><span class="bottom">5'</span></li>
+                <li class="item" data-key="eee" style="margin-left: 1.3%;"><span class="bottom">6'</span></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<style>
+    html, body{
+        width: 100%;
+        height: 100%;
+    }
+    header img{
+        width: 33px;
+        float: right;
+        padding-right: 5px;
+    }
+    header .logout:hover{
+        content: url('../images/logoutSelect.png');
+        cursor:pointer;
+    }
+    .blackKey, .whiteKey {
+        list-style: none;
+        margin: 50px auto 30px auto;
+        width: 92%;
+        display: flex;
+        cursor: pointer;
+    }
+    .blackKey .item{
+        height: 140px;
+        width: 3.1%;
+        background: black;
+    }
+    .blackKey .item span{
+        color: white;
+    }
+    .item {
+        width: 4.3%;
+        height: 250px;
+        background: #fff;
+        text-align: center;
+        margin-right: 3px;
+        user-select: none;
+        position: relative;
+        border: 1px solid;
+        border-radius: 0 0 6px 6px;
+    }
+    .blackKey .item:active{
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 30px 5px;
+    }
+    .whiteKey .item:active{
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 20px 10px;
+    }
+    .item span {
+        position: absolute;
+        left: 50%;
+        bottom: 15px;
+        transform: translateX(-50%);
+        display: block;
+    }
+    .item .bottom::after {
+        content: ".";
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+</style>
