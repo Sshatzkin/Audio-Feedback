@@ -38,8 +38,23 @@ div{
   color: #039eb0;
   cursor:pointer;
 }
+
+.fileButton{
+  width: auto;
+  float: none;
+  background-color: #ffffff;
+  margin-left: -80px;
+  text-align: center;
+  border-bottom: 1px solid #ccc7c7;
+
+}
+
 #uploadSpan:active{
   background: #f3f3f3;
+}
+#uploadLabel{
+  width: 107%;
+  margin-left: -15px;
 }
 .sideBar img{
   width: 35px;
@@ -166,16 +181,11 @@ a{
   width: 92%;
   word-wrap: break-word;
 }
-a:hover{
+/*a:hover{
   background-color: #f3f3f3;
-}
-ul li ul li{
-  float: none;
-  background-color: #ffffff;
-  margin-left: -80px;
-  text-align: center;
-  border-bottom: 1px solid #ccc7c7;
-}
+}*/
+
+/*
 ul li ul{
   opacity: 1;
   transition: opacity 500ms 0s;
@@ -183,14 +193,6 @@ ul li ul{
 ul li:hover ul{
   opacity: 1;
   transition: opacity 500ms 0s;
-}
+}*/
 
-#uploadLabel{
-  width: 107%;
-  margin-left: -15px;
-}
-
-.fileButton{
-  width: auto;
-}
 
