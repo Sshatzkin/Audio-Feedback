@@ -108,9 +108,11 @@ function setTimestamp (time, filename){
 }
 
 function addTimestampHandler(e){
+  console.log(e);
   var filename = document.getElementById("VideoTitleSpan").innerHTML;
   setTimestamp(3, filename);
 }
 
-var addBtn = document.getElementById("addBtn");
-addBtn.addEventListener("click", addTimestampHandler);
+//var addBtn = document.getElementById("addBtn");
+//addBtn.addEventListener("click", addTimestampHandler);
+
