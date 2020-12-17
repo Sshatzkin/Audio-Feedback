@@ -34,6 +34,7 @@
 
     <link rel="stylesheet" href="./css/pianoPage.css" />
     <link rel="stylesheet" href="./css/navBar.css"/>
+    <link rel="stylesheet" href="./css/switch.css"/>
   </head>
   <body>
     <!-- <header style="border-bottom: 3px solid #06ddf7;">
@@ -69,7 +70,13 @@
     </nav>
 
 <div class="role-container" style="padding-left: 45%;margin-top: 3rem;">
-  <div class="custom-control custom-radio">
+  <!-- Rectangular switch -->
+  <span id=playerLabel>Player</span><br/>
+  <label class="switch">
+    <input id="playerSwitch" type="checkbox" checked>
+    <span class="slider"></span>
+  </label>
+  <!--<div class="custom-control custom-radio">
     <input type="radio" id="listening-role" name="customRadio" class="custom-control-input">
     <label class="custom-control-label" for="customRadio1">Listening</label>
   </div>
@@ -77,6 +84,7 @@
     <input type="radio" id="playing-role" name="customRadio" class="custom-control-input" checked>
     <label class="custom-control-label" for="customRadio2">Playing</label>  
   </div>
+-->
 </div>  
     
     <div
