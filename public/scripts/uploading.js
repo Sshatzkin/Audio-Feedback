@@ -2,11 +2,10 @@
 var storage = firebase.storage();
 
 var storageRef = firebase.storage().ref();
-console.log(storageRef);
 
-// Listen for image uploaded
+// Upload Input Tag
 const actualBtn = document.getElementById('file_input');
-
+// Upload Message Span
 const fileChosen = document.getElementById('uploadSpan');
 
 actualBtn.addEventListener('change', function(){
@@ -31,9 +30,26 @@ actualBtn.addEventListener('change', function(){
 
   // Upload the file and metadata
   var uploadTask = storageRef.child('user_videos/' + file.name).put(file, metadata);
-
-  
-
 })
 
 
+// __ Downloading a video __
+//var filename = 'user_videos/30-second-instrumental.mp4';
+
+var filename = '30-second-instrumental.mp4';
+var filepath = 'user_videos/' + filename;
+
+storageRef.child(filepath).getDownloadURL().then(function(url) {
+  // `url` is the download URL for 'images/stars.jpg'
+
+  // Or inserted into an <img> element:
+  console.log(url);
+  // Name of the video box
+  var videoTag = document.getElementById('VideoPlaceholder');
+  videoTag.src = url;
+
+  var videoTitleSpan = document.getElementById('VideoTitleSpan');
+  videoTitleSpan.innerHTML = filename;
+}).catch(function(error) {
+  // Handle any errors
+});
