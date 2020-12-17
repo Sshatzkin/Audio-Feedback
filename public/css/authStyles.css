@@ -8,7 +8,7 @@
 
 .auth-card{
     background-color: azure;
-    width: 25%;
+    width: 40%;
     height: 22rem;
     margin: auto;
     border-radius: 1rem;
@@ -42,4 +42,23 @@
     border-radius: 2px;
     padding: 10px 19px;
     cursor: pointer;
+    margin-top: 0.5em;
+}
+
+input{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 315px;
+    border: 1px solid #ccc7c7;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px;
+}
+
+input:hover{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 4px 1px;
+}
+
+input:focus{
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px 1px;
 }
