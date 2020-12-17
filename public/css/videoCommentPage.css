@@ -20,6 +20,14 @@ header .logout:hover{
   content: url('../images/logoutSelect.png');
   cursor:pointer;
 }
+header .piano:hover{
+  content: url('../images/pianoSelect.png');
+  cursor:pointer;
+}
+header .videoNav:hover{
+  content: url('../images/videoNavSelect.png');
+  cursor:pointer;
+}
 .sideBar{
   height: 100%;
   position: fixed;
