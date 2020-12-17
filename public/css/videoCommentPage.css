@@ -2,6 +2,7 @@ html{
   height: 100%;
   width: 100%;
   overflow:hidden;
+  font-family: 'Avenir';
 }
 body{
   font-family: 'Avenir';
@@ -17,6 +18,14 @@ header img{
 }
 header .logout:hover{
   content: url('../images/logoutSelect.png');
+  cursor:pointer;
+}
+header .piano:hover{
+  content: url('../images/pianoSelect.png');
+  cursor:pointer;
+}
+header .videoNav:hover{
+  content: url('../images/videoNavSelect.png');
   cursor:pointer;
 }
 .sideBar{
@@ -162,6 +171,8 @@ a{
   color:black;
   display: block;
   padding:0 10px;
+  width: 92%;
+  word-wrap: break-word;
 }
 a:hover{
   background-color: #f3f3f3;
@@ -169,14 +180,13 @@ a:hover{
 ul li ul li{
   float: none;
   background-color: #ffffff;
-  white-space: nowrap;
   margin-left: -80px;
   width: 157%;
   text-align: center;
   border-bottom: 1px solid #ccc7c7;
 }
 ul li ul{
-  opacity: 0;
+  opacity: 1;
   transition: opacity 500ms 0s;
 }
 ul li:hover ul{
