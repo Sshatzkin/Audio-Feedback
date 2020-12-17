@@ -19,12 +19,20 @@ function init_buttons(){
       document.getElementById("addText").style.transition = "opacity 500ms 0s";
       document.getElementById("addText").style.opacity = "0";
   })
-  document.getElementById("deleteBtn").addEventListener("mouseover", function () {
+
+  var deleteBtn = document.getElementById("deleteBtn");
+  deleteBtn.addEventListener("mouseover", function () {
       document.getElementById("delete").style.transition = "opacity 500ms 0s";
       document.getElementById("delete").style.opacity = "1";
   })
-  document.getElementById("deleteBtn").addEventListener("mouseout", function () {
+  deleteBtn.addEventListener("mouseout", function () {
       document.getElementById("delete").style.transition = "opacity 500ms 0s";
       document.getElementById("delete").style.opacity = "0";
   })
 }
+
+// Clear Textbox on garbage button click
+var textBox = document.getElementById("commentInput");
+deleteBtn.addEventListener("click", function() {
+  textBox.value = "";
+})

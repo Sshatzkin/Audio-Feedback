@@ -4,24 +4,6 @@ body {
   width: 100%;
   height: 100%;
 }
-header img {
-  width: 33px;
-  float: right;
-  padding-right: 5px;
-}
-header .logout:hover {
-  content: url("../images/logoutSelect.png");
-  cursor: pointer;
-}
-header .piano:hover {
-  content: url("../images/pianoSelect.png");
-  cursor: pointer;
-}
-header .videoNav:hover {
-  content: url("../images/videoNavSelect.png");
-  cursor: pointer;
-}
-
 .blackKey, .whiteKey {
     list-style: none;
     margin: 50px auto 30px auto;
@@ -81,22 +63,4 @@ header .videoNav:hover {
 }
 body{
     font-family: 'Avenir';
-}
-
-.navbar-collapse{
-    justify-content: flex-end;
-}
-
-.navbar-brand{
-    padding: 0px 10px;
-}
-
-.nav-item{
-    margin-right: 1rem;
-
-}
-
-.nav-icon{
-    width: 2rem !important;
-    height: 2rem !important;
 }
