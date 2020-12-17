@@ -70,6 +70,11 @@ Piano students can have additional help understanding feedback with the real-tim
 * JavaScript
 * [Firebase](https://firebase.google.com/)
 
+    * [Firebase Hosting](https://firebase.google.com/docs/hosting)
+    * [Firebase Authentication](https://firebase.google.com/docs/auth)
+    * [Firebase Storage](https://firebase.google.com/docs/storage)
+    * [Firebase Real-Time Database](https://firebase.google.com/docs/database)
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
