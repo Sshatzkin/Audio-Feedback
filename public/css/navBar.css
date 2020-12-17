@@ -1,0 +1,43 @@
+header img{
+  width: 33px;
+  float: right;
+  padding-right: 5px;
+}
+header .logout:hover{
+  content: url('../images/logoutSelect.png');
+  cursor:pointer;
+}
+header .piano:hover{
+  content: url('../images/pianoSelect.png');
+  cursor:pointer;
+}
+header .videoNav:hover{
+  content: url('../images/videoNavSelect.png');
+  cursor:pointer;
+}
+
+nav {
+  border-bottom: 2px solid #039eb0;
+  margin-bottom: 5px;
+}
+
+#navbarTitle{
+  color: #000000
+}
+
+.navbar-collapse{
+  justify-content: flex-end;
+}
+
+.nav-item{
+  margin-right: 1rem;
+}
+
+.navbar-brand{
+  width: auto;
+}
+
+.nav-icon{
+  width: 2rem !important;
+  height: 2rem !important;
+}

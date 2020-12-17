@@ -11,23 +11,7 @@ body{
 div{
   position: fixed;
 }
-header img{
-  width: 33px;
-  float: right;
-  padding-right: 5px;
-}
-header .logout:hover{
-  content: url('../images/logoutSelect.png');
-  cursor:pointer;
-}
-header .piano:hover{
-  content: url('../images/pianoSelect.png');
-  cursor:pointer;
-}
-header .videoNav:hover{
-  content: url('../images/videoNavSelect.png');
-  cursor:pointer;
-}
+/* SIDEBAR CSS */
 .sideBar{
   height: 100%;
   position: fixed;
@@ -49,6 +33,11 @@ header .videoNav:hover{
   color: #039eb0;
   cursor:pointer;
 }
+.sideBar .fileButton:hover{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  color: #039eb0;
+  cursor:pointer;
+}
 #uploadSpan:active{
   background: #f3f3f3;
 }
@@ -58,6 +47,8 @@ header .videoNav:hover{
   margin-left: 8px;
   margin-top: -8px;
 }
+
+/* VIDEO & FEEDBACK CSS */
 .main .video{
   width: 600px;
   height: 300px;
@@ -194,10 +185,6 @@ ul li:hover ul{
   transition: opacity 500ms 0s;
 }
 
-.navbar-collapse{
-  justify-content: flex-end;
-}
-
 #uploadLabel{
   width: 107%;
   margin-left: -15px;
@@ -207,15 +194,3 @@ ul li:hover ul{
   width: auto;
 }
 
-.nav-item{
-  margin-right: 1rem;
-}
-
-.navbar-brand{
-  width: auto;
-}
-
-.nav-icon{
-  width: 2rem !important;
-  height: 2rem !important;
-}
