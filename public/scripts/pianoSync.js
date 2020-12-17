@@ -9,7 +9,7 @@ var pianoPath = 'Piano/0/';
  */
 function processID(id){
   var newid = id.replace("/", "-");
-  newid = id.replace(".", "-");
+  newid = newid.replace(".", "-");
   return newid;
 }
 

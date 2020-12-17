@@ -18,7 +18,7 @@ var database = firebase.database();
  */
 function processID(id){
   var newid = id.replace("/", "-");
-  newid = id.replace(".", "-");
+  newid = newid.replace(".", "-");
   return newid;
 }
 
@@ -170,6 +170,7 @@ setVideo(default_filename);
  */
 var commentsContainer = document.getElementById("commentsBox");
 function displayComment (data){
+  console.log(data);
   // Get values from data
   var text = data.exportVal().text;
   var time = formatTime(data.exportVal().timestamp);
@@ -193,11 +194,13 @@ function displayComment (data){
 }
 
 function setCommentListner(filename){
+  console.log("Setting listener");
   var filepath = files_folder + filename;
   var fileRef = storageRef.child(filepath);
   // Fetch metadata to get video_ID
   fileRef.getMetadata().then(function(metadata) {
     var videoID = processID(metadata.md5Hash);
+    console.log(videoID);
     var filepath = 'Videos/' + videoID +"/comments/";
     var commentsRef = database.ref(filepath).orderByChild('timestamp');
     // Empty out comments container first
