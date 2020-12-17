@@ -1,76 +1,99 @@
-html, body{
-    width: 100%;
-    height: 100%;
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
-header img{
-    width: 33px;
-    float: right;
-    padding-right: 5px;
+header img {
+  width: 33px;
+  float: right;
+  padding-right: 5px;
 }
-header .logout:hover{
-    content: url('../images/logoutSelect.png');
-    cursor:pointer;
+header .logout:hover {
+  content: url("../images/logoutSelect.png");
+  cursor: pointer;
 }
-header .piano:hover{
-    content: url('../images/pianoSelect.png');
-    cursor:pointer;
+header .piano:hover {
+  content: url("../images/pianoSelect.png");
+  cursor: pointer;
 }
-header .videoNav:hover{
-    content: url('../images/videoNavSelect.png');
-    cursor:pointer;
+header .videoNav:hover {
+  content: url("../images/videoNavSelect.png");
+  cursor: pointer;
 }
-.blackKey, .whiteKey {
-    list-style: none;
-    margin: 50px auto 30px auto;
-    width: 120%;
-    display: flex;
-    cursor: pointer;
+.blackKey,
+.whiteKey {
+  list-style: none;
+  margin: 50px auto 30px auto;
+  width: 120%;
+  display: flex;
+  cursor: pointer;
 }
-.blackKey .item{
-    height: 140px;
-    width: 3.1%;
-    background: black;
+.blackKey .item {
+  height: 140px;
+  width: 3.1%;
+  background: black;
 }
-.blackKey .item span{
-    color: white;
+.blackKey .item span {
+  color: white;
 }
 .item {
-    width: 4.3%;
-    height: 250px;
-    background: #fff;
-    text-align: center;
-    margin-right: 3px;
-    user-select: none;
-    position: relative;
-    border: 1px solid;
-    border-radius: 0 0 6px 6px;
+  width: 4.3%;
+  height: 250px;
+  background: #fff;
+  text-align: center;
+  margin-right: 3px;
+  user-select: none;
+  position: relative;
+  border: 1px solid;
+  border-radius: 0 0 6px 6px;
 }
-.blackKey .item:hover{
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 10px 10px;
+.blackKey .item:hover {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 10px 10px;
 }
-.whiteKey .item:hover{
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 10px 8px;
+.whiteKey .item:hover {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 10px 8px;
 }
-.blackKey .item:active{
-    background-color: #bdc5c5;
+.blackKey .item:active {
+  background-color: #bdc5c5;
 }
-.whiteKey .item:active{
-    background-color: #bdc5c5;
+.whiteKey .item:active {
+  background-color: #bdc5c5;
 }
 .item span {
-    position: absolute;
-    left: 50%;
-    bottom: 15px;
-    transform: translateX(-50%);
-    display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  transform: translateX(-50%);
+  display: block;
 }
 .item .bottom::after {
-    content: ".";
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-    position: absolute;
-    top: 3px;
-    left: 50%;
-    transform: translateX(-50%);
+  content: ".";
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+body{
+    font-family: 'Avenir';
+}
+
+.navbar-collapse{
+    justify-content: flex-end;
+}
+
+.navbar-brand{
+    padding: 0px 10px;
+}
+
+.nav-item{
+    margin-right: 1rem;
+}
+
+.nav-icon{
+    width: 2rem !important;
+    height: 2rem !important;
 }

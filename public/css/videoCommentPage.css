@@ -181,7 +181,6 @@ ul li ul li{
   float: none;
   background-color: #ffffff;
   margin-left: -80px;
-  width: 157%;
   text-align: center;
   border-bottom: 1px solid #ccc7c7;
 }
@@ -192,4 +191,30 @@ ul li ul{
 ul li:hover ul{
   opacity: 1;
   transition: opacity 500ms 0s;
+}
+
+.navbar-collapse{
+  justify-content: flex-end;
+}
+
+#uploadLabel{
+  width: 107%;
+  margin-left: -15px;
+}
+
+.fileButton{
+  width: auto;
+}
+
+.nav-item{
+  margin-right: 1rem;
+}
+
+.navbar-brand{
+  width: auto;
+}
+
+.nav-icon{
+  width: 2rem !important;
+  height: 2rem !important;
 }
