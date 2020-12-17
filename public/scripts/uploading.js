@@ -1,15 +1,51 @@
+/*
+ * INITIALIZATION __________________
+ */
+
 // Get a reference to the storage service, which is used to create references in your storage bucket
 var storage = firebase.storage();
 
 var storageRef = firebase.storage().ref();
 
-// Upload Input Tag
+// Cloud Storage folder that contains all user video uploads
+var files_folder = 'user_videos/';
+
+// Get a reference to the database
+var database = firebase.database();
+
+/*
+ * Helper Function __________________
+ */
+function processID(id){
+  var newid = id.replace("/", "-");
+
+  return newid;
+}
+
+/*
+ * UPLOADING VIDEOS __________________
+ */
+
+// Get some elements
 const actualBtn = document.getElementById('file_input');
-// Upload Message Span
 const fileChosen = document.getElementById('uploadSpan');
 
-// Database folder that contains all user uploads
-var files_folder = 'user_videos/';
+function writeVideotoDB(videoName, videoID, user){
+  var filepath = 'Videos/' + processID(videoID);
+  firebase.database().ref(filepath).set({
+    name: videoName,
+    username: user,
+    id: videoID,
+    comments: {
+      0: {
+        timestamp: 0,
+        text: 0
+      }
+    }
+  });
+}
+// This is just for testing
+writeVideotoDB("Sam's video", "AISODJAS21", "SAm");
 
 actualBtn.addEventListener('change', function(){
   //fileChosen.textContent = "File: " + this.files[0].name;
@@ -20,19 +56,21 @@ actualBtn.addEventListener('change', function(){
    // Create file metadata including the content type
    var metadata = {
     contentType: file.type,
-    user: "UserNameGoesHere"
+    customMetadata: {
+      "user" : "USERNAME GOES HERE"
+    }
   };
 
   image_ref.put(file, metadata).then(function(snapshot) {
-    console.log('Uploaded a file!');
+    console.log(snapshot.metadata.md5Hash);
     alert("File uploaded!");
+    writeVideotoDB(snapshot.metadata.name, snapshot.metadata.md5Hash, "USERNAME GOES HERE");
   });
-
-
-
-  // Upload the file and metadata
-
 })
+
+/*
+ * DISPLAYING VIDEO LIST __________________
+ */
 
 // __ Show available files __
 // Create a reference under which you want to list
@@ -69,9 +107,9 @@ listRef.listAll().then(function(res) {
   // Uh-oh, an error occurred!
 });
 
-
-
-
+/*
+ * DOWNLOAD AND DISPLAY VIDEO __________________
+ */
 
 // __ Downloading a video __
 var default_filename = '30-second-instrumental.mp4';
@@ -102,17 +140,67 @@ function setVideo (filename){
 
 setVideo(default_filename);
 
+/*
+ * Display Comments __________________
+ */
+function displayComments (metadata){
+
+}
+
+/*
+ * SET COMMENT __________________
+ */
+function writeCommentToDB(videoRef,time, comment){
+  videoRef.getMetadata().then(function(metadata) {
+    var videoID = processID(metadata.md5Hash);
+    var filepath = 'Videos/' + videoID +"/comments/";
+    console.log(videoID);
+    console.log(filepath);
+    var newPostRef = firebase.database().ref(filepath).push()
+    newPostRef.set({
+      timestamp: time,
+      text: comment
+    });
+  });
+}
+
+
 //__ Set Timestamp __
-function setTimestamp (time, filename){
-  console.log(filename);
+function setTimestamp (filename){
+  // Get reference for the video
+  var videoRef = storageRef.child(files_folder + filename);
+  
+  var videoElement = document.getElementById('VideoPlaceholder');
+  var videoTime = videoElement.currentTime;
+
+
+  var commentText = document.getElementById("commentInput").value;
+  writeCommentToDB(videoRef, videoTime, commentText);
+  
+  // Create metadata file to update
+  /*var newMetadata = {
+    customMetadata: {
+      "Note1" : videoTime + ":" + commentText,
+    } 
+  }
+  
+  // Update metadata properties
+  videoRef.updateMetadata(newMetadata).then(function(metadata) {
+    // Updated metadata for image is returned in the Promise
+
+    console.log(metadata.customMetadata);
+    displayComments(metadata);
+  }).catch(function(error) {
+    // Uh-oh, an error occurred!
+  });
+  */
 }
 
 function addTimestampHandler(e){
-  console.log(e);
   var filename = document.getElementById("VideoTitleSpan").innerHTML;
-  setTimestamp(3, filename);
+  setTimestamp(filename);
 }
 
-//var addBtn = document.getElementById("addBtn");
-//addBtn.addEventListener("click", addTimestampHandler);
+var addBtn = document.getElementById("addBtn");
+addBtn.addEventListener("click", addTimestampHandler);
 

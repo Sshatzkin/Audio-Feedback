@@ -87,16 +87,6 @@
                 </div>
             </div>
         </div>
-        <div class="buttons" style="top: 474px; left: 289px;">
-            <div id="addText" style="top: 447px;left: 270px;">Add Timestamp</div>
-            <img id="addBtn" src="./images/addTimeStamp.png">
-            <div id="delete" style="left: 370px;">Delete Timestamp</div>
-            <img id="deleteBtn" src="./images/delete.png" style="margin-left: 20px;">
-        </div>
-        <div class="typeInFeedback" style="left: 289px; top: 533px;">
-            <textarea placeholder="Type in your feedback..."></textarea>
-            <img src="./images/enter.png">
-        </div>
       </div>
       <div class="buttons" style="top: 474px; left: 289px">
         <div id="addText" style="top: 447px; left: 270px">Add Timestamp</div>
@@ -109,7 +99,7 @@
         />
       </div>
       <div class="typeInFeedback" style="left: 289px; top: 533px">
-        <textarea placeholder="Type in your feedback..."></textarea>
+        <textarea id="commentInput" placeholder="Type in your feedback..."></textarea>
         <img src="../images/enter.png" />
       </div>
     </div>
@@ -124,12 +114,13 @@
   <!-- Add Firebase products that you want to use -->
   <script src="/__/firebase/8.2.0/firebase-storage.js"></script>
   <script src="/__/firebase/8.2.0/firebase-auth.js"></script>
+  <script src="/__/firebase/8.2.0/firebase-database.js"></script>
 
   <!-- Initialize Firebase -->
   <script src="/__/firebase/init.js"></script>
 
-  <script src="/scripts/uploading.js"></script>
   <script src="/scripts/buttons.js"></script>
+  <script src="/scripts/uploading.js"></script>
   <script src="./scripts/auth/logout.js" charset="utf-8"></script>
 </body>
 </html>

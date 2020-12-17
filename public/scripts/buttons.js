@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", init_buttons);
 
 function init_buttons(){
-  console.log("Called Init Buttons");
   //Change the uploading image in the upload span
   var uploadSpan = document.getElementById("uploadSpan");
   uploadSpan.addEventListener("mouseover", function(){
@@ -12,9 +11,7 @@ function init_buttons(){
   },false);
 
   //Popover textbox for the buttons
-  console.log(document.getElementById('addBtn'));
   document.getElementById("addBtn").addEventListener("mouseover", function () {
-      console.log("Mouseover");
       document.getElementById("addText").style.transition = "opacity 500ms 0s";
       document.getElementById("addText").style.opacity = "1";
   })
@@ -31,7 +28,3 @@ function init_buttons(){
       document.getElementById("delete").style.opacity = "0";
   })
 }
-
-
-
-console.log(document.getElementById('addBtn'));
