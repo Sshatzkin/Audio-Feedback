@@ -13,8 +13,6 @@ var files_folder = 'user_videos/';
 
 actualBtn.addEventListener('change', function(){
   //fileChosen.textContent = "File: " + this.files[0].name;
-  console.log(this.files[0]);
-
   var file = this.files[0];
 
   var image_ref = storageRef.child(files_folder + file.name);
@@ -42,7 +40,6 @@ var listRef = storageRef.child(files_folder);
 
 // Find all the prefixes and items.
 listRef.listAll().then(function(res) {
-  console.log("listall");
   res.prefixes.forEach(function(folderRef) {
     // All the prefixes under listRef.
     // You may call listAll() recursively on them.
@@ -57,16 +54,18 @@ listRef.listAll().then(function(res) {
   // set the file list element
   document.getElementById('fileList').innerHTML = html_list;
 
+  // Set Up Filebuttons
+  var file_buttons = document.getElementsByClassName("fileButton");
 
-// filebuttons
-var file_buttons = document.getElementsByClassName("fileButton");
-console.log(file_buttons);
-for (file_button of file_buttons) {
-  file_button.addEventListener('click', function(){
-    console.log(file_button.childNodes[0].innerHTML);
-    setVideo(file_button.childNodes[0].innerHTML);
-    })
+  function fileClickHandler (e){
+    var file_button = e.srcElement;
+    setVideo(file_button.innerHTML);
   }
+
+  for (file_button of file_buttons) {
+    file_button.addEventListener('click', fileClickHandler);
+  }
+
 }).catch(function(error) {
   // Uh-oh, an error occurred!
 });
@@ -83,8 +82,11 @@ var default_filename = '30-second-instrumental.mp4';
  */
 function setVideo (filename){
   var filepath = files_folder + filename;
-
-  storageRef.child(filepath).getDownloadURL().then(function(url) {
+  var fileRef = storageRef.child(filepath);
+  var metadata = fileRef.getMetadata().then(function(metadata){
+    console.log(metadata);
+  });
+  fileRef.getDownloadURL().then(function(url) {
     // `url` is the download URL for 'images/stars.jpg'
   
     // Or inserted into an <img> element:
@@ -101,3 +103,15 @@ function setVideo (filename){
 
 setVideo(default_filename);
 
+//__ Set Timestamp __
+function setTimestamp (time, filename){
+  console.log(filename);
+}
+
+function addTimestampHandler(e){
+  var filename = document.getElementById("VideoTitleSpan").innerHTML;
+  setTimestamp(3, filename);
+}
+
+var addBtn = document.getElementById("addBtn");
+addBtn.addEventListener("click", addTimestampHandler);
