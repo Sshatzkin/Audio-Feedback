@@ -2,7 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f319536-81ae-4472-9247-06f2c46aa161" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/piano.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/piano.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/pianoSelect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/videoNav.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/videoNavSelect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/addTimeStamp.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/addTimeStamp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/delete.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/delete.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/enter.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/enter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/enterSelect.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/enterSelect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/haha.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/haha.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logout.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logout.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logoutSelect.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logoutSelect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/profilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/profilePic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/searchSelect.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/searchSelect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/upload.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/upload.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/uploadSelect.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/uploadSelect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/piano.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/piano.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/videoFeedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/videoFeedback.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +61,8 @@
       <recent name="$PROJECT_DIR$/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>

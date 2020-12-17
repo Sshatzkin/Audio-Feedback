@@ -7,8 +7,10 @@
 <body>
     <header style="border-bottom: 3px solid #06ddf7;">
         <span style="padding-left: 15px; font-size: 30px">Piano</span>
-        <img class="logout" src="../images/logout.png">
-        <img src="../images/profilePic.png">
+        <img class="logout" src="images/logout.png">
+        <img src="images/profilePic.png">
+        <img class="piano" src="images/piano.png">
+        <img class="videoNav" src="images/videoNav.png">
     </header>
     <div class="piano-box" style="margin-top: 14%;margin-left: 12%;margin-right: -12%;">
         <div>
@@ -59,7 +61,15 @@
         padding-right: 5px;
     }
     header .logout:hover{
-        content: url('../images/logoutSelect.png');
+        content: url('images/logoutSelect.png');
+        cursor:pointer;
+    }
+    header .piano:hover{
+        content: url('images/pianoSelect.png');
+        cursor:pointer;
+    }
+    header .videoNav:hover{
+        content: url('images/videoNavSelect.png');
         cursor:pointer;
     }
     .blackKey, .whiteKey {
@@ -88,11 +98,17 @@
         border: 1px solid;
         border-radius: 0 0 6px 6px;
     }
+    .blackKey .item:hover{
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 10px 10px;
+    }
+    .whiteKey .item:hover{
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 10px 8px;
+    }
     .blackKey .item:active{
-        box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 30px 5px;
+        background-color: #bdc5c5;
     }
     .whiteKey .item:active{
-        box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 20px 10px;
+        background-color: #bdc5c5;
     }
     .item span {
         position: absolute;
