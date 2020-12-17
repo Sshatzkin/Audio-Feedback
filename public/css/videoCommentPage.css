@@ -193,8 +193,8 @@ ul li:hover ul{
   transition: opacity 500ms 0s;
 }
 
-.right-aligned-navbar{
-margin-left: 85%;
+.navbar-collapse{
+  justify-content: flex-end;
 }
 
 #uploadLabel{
@@ -203,5 +203,13 @@ margin-left: 85%;
 }
 
 .fileButton{
+  width: auto;
+}
+
+.nav-item{
+  margin-right: 1rem;
+}
+
+.navbar-brand{
   width: auto;
 }
