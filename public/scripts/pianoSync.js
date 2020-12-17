@@ -4,21 +4,38 @@ var database = firebase.database();
 //var pianoRef = database.ref('Piano/0/');
 var pianoPath = 'Piano/0/';
 
-function writeKey(keyName){
+/*
+ * Helper Function __________________
+ */
+function processID(id){
+  var newid = id.replace("/", "-");
+  newid = id.replace(".", "-");
+  return newid;
+}
+
+function writeKey(keyName, state){
   var path = pianoPath + keyName + '/';
   database.ref(path).set({
-    pressed: false
+    pressed: state
   });
 }
 
-writeKey("A");
+function updateKey(keyName, state){
+  var path = pianoPath + keyName + '/';
+  database.ref(path).child('pressed').push().key;set({
+    pressed: state
+  });
+}
 
-/*var audio = document.createElement('audio');
-var allKeys = document.getElementsByTagName('li');
+
+/*
+This is just for creating a new Piano
+
+//var audio = document.createElement('audio');
+var allKeys = document.getElementsByClassName("pianoKey");
 for(var i = 0; i < allKeys.length; i++){
-    allKeys[i].addEventListener('click', function () {
-        audio.src = 'pianoKeySound/' + this.id;
-        audio.play();
-    })
+  writeKey(processID(allKeys[i].id), false);  
 }
 */
+
+
