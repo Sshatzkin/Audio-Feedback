@@ -12,7 +12,16 @@
         <img src="./images/profilePic.png">
     </header>
     <div class="sideBar" style="height: 100%; width: 220px; top: 52px">
-        <span id="uploadSpan">Upload Video<img id="uploadImg" src="./images/uploadSelect.png" style="width: 32px;"></span>
+        <!-- <span id="uploadSpan">Upload Video<img id="uploadImg" src="./images/uploadSelect.png" style="width: 32px;"></span>
+        -->
+        
+          <label for="file_input" id="uploadLabel">
+            <span id=uploadSpan>
+              Upload Video
+              <img id="uploadImg" src="./images/uploadSelect.png" style ="width: 32px;"/>  
+            </span>
+            </label>
+            <input type="file" id="file_input" name="myfile" hidden>
         <ul>
             <li><span style="width: 123%; margin-left: -40px;">Files</span>
                 <ul>
