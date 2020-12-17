@@ -171,7 +171,8 @@ ul li ul li{
   background-color: #ffffff;
   white-space: nowrap;
   margin-left: -80px;
-  width: 157%;
+  width: 148%;
+  width: fit-content;
   text-align: center;
   border-bottom: 1px solid #ccc7c7;
 }
@@ -182,4 +183,13 @@ ul li ul{
 ul li:hover ul{
   opacity: 1;
   transition: opacity 500ms 0s;
+}
+
+.right-aligned-navbar{
+margin-left: 85%;
+}
+
+#uploadLabel{
+  width: 107%;
+  margin-left: -1rem;
 }
