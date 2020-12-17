@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Playback</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./images/favicon/site.webmanifest" />
+
     <link rel="stylesheet" href="./css/videoCommentPage.css"/>
 </head>
 <body>
@@ -11,17 +17,17 @@
         <img id="logout" class="logout" src="./images/logout.png">
         <img src="./images/profilePic.png">
     </header>
+
     <div class="sideBar" style="height: 100%; width: 220px; top: 52px">
         <!-- <span id="uploadSpan">Upload Video<img id="uploadImg" src="./images/uploadSelect.png" style="width: 32px;"></span>
         -->
-
-          <label for="file_input" id="uploadLabel">
+        <label for="file_input" id="uploadLabel">
             <span id=uploadSpan>
               Upload Video
               <img id="uploadImg" src="./images/uploadSelect.png" style ="width: 32px;"/>
             </span>
-            </label>
-            <input type="file" id="file_input" name="myfile" hidden>
+        </label>
+        <input type="file" id="file_input" name="myfile" hidden>
         <ul>
             <li><span style="width: 123%; margin-left: -40px;">Files</span>
                 <ul id="fileList">
@@ -35,7 +41,6 @@
         <div class="video" style="margin-top: 15px; margin-left: 62px;">
             <span id = "VideoTitleSpan" style="font-size: 20px;">Video Name</span>
             <!--Place for Video-->
-            <!--<video></video>-->
             <video id="VideoPlaceholder"  style="width: 100%; margin-top: 10px;" controls>
               Your browser does not support the video tag
             </video>
@@ -95,11 +100,12 @@
   <!-- Initialize Firebase -->
   <script src="/__/firebase/init.js"></script>
 
-  <script src="/scripts/buttons.js"></script>
-  <script src="/scripts/uploading.js"></script>
+  <script src="./scripts/buttons.js"></script>
+  <script src="./scripts/uploading.js"></script>
   <script src="./scripts/auth/logout.js" charset="utf-8"></script>
 </body>
 </html>
 
 <!--
-TODO(if still have time): 1. searching function for the feedback section. 2. confirmation popup textbox for deleting timestamp and logout. 3. Login page???-->
+TODO(if still have time): 1. searching function for the feedback section. 2. confirmation popup textbox for deleting timestamp and logout. 3. Login page???
+-->
