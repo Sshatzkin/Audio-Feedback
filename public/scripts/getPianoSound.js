@@ -211,18 +211,18 @@ for(var i = 0; i < allKeys.length; i++){
 */
 
 
-var player_switch = document.getElementById("playerSwitch");
-var player_label = document.getElementById("playerLabel");
+//var player_switch = document.getElementById("playerSwitch");
+//var player_label = document.getElementById("playerLabel");
 
 function set_mode(){
 
-  var player_mode = player_switch.checked;
+  var player_mode = true;//player_switch.checked;
   console.log(player_mode);
 
 
 
   if(player_mode){
-    player_label.innerHTML = "Player";
+    //player_label.innerHTML = "Player";
     var audio = document.createElement("audio");
     var allKeys = document.getElementsByClassName("pianoKey");
     for (var i = 0; i < allKeys.length; i++) {
@@ -561,7 +561,27 @@ function set_mode(){
             break;
         }
     });
-  } else {
+     // Set label
+     //player_label.innerHTML = "Listener";
+
+     // Remove listeners
+     //document.onkeydown = null;
+     //document.onkeyup = null;
+ 
+ 
+     var audio = document.createElement("audio");
+     var allKeys = document.getElementsByClassName("pianoKey");
+     for (var i = 0; i < allKeys.length; i++) {
+       var new_element = allKeys[i].cloneNode(true);
+       //allKeys[i].parentNode.replaceChild(new_element, allKeys[i]);
+       setDBKeyListener(allKeys[i].id);
+     }
+  }
+ 
+     // Update from the server.
+     //pressKey(audio, keyId, on);
+ 
+  /*} else {
     // Set label
     player_label.innerHTML = "Listener";
 
@@ -581,10 +601,10 @@ function set_mode(){
     // Update from the server.
     //pressKey(audio, keyId, on);
 
-  }
-  return
+  }*/
+  return;
 }
 
 set_mode();
-player_switch.addEventListener( 'change', set_mode);
+//player_switch.addEventListener( 'change', set_mode);
 
